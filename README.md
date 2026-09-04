@@ -65,12 +65,6 @@ flowchart TB
     style AGENT fill:#e6fffa,stroke:#00b5d8,stroke-width:2px
 ```
 
-*For detailed specifications, see:*
-- 📄 [Product Requirements Document (`PRD.md`)](./PRD.md)
-- ⚙️ [Technical Requirements Document (`TRD.md`)](./TRD.md)
-- 🔒 [Security & Threat Model (`SECURITY.md`)](./SECURITY.md)
-- 📋 [Agent Behavior Contract (`AI_INSTRUCTION.md`)](./AI_INSTRUCTION.md)
-
 ---
 
 ## 📁 Repository Structure
