@@ -1,0 +1,83 @@
+$ .venv\Scripts\python.exe agent/graph.py
+================================================================================
+           NYKAA ASSIST TASK 7 — LANGGRAPH ROUTING VERIFICATION                 
+================================================================================
+
+--- 1. Policy Route Verification ---
+Query : 'Can I return this product?'
+Route : policy | Type: policy_answer | Confidence: 0.523
+Answer: safety reasons, intimate wear, innerwear, opened fragrances, and customized personal care items are ...
+
+Query : 'Can I cancel my order before dispatch?'
+Route : policy | Type: policy_answer | Confidence: 0.666
+Answer: Customers can cancel an order free of charge at any stage before the shipment has been dispatched fr...
+
+Query : 'How long does international delivery take?'
+Route : policy | Type: policy_answer | Confidence: 0.567
+Answer: Nykaa ships select Beauty and Wellness products to over 20 international destinations through premie...
+
+Query : 'What is the warranty on a hair dryer?'
+Route : policy | Type: policy_answer | Confidence: 0.497
+Answer: Electronic styling tools, personal grooming appliances, and tech wellness devices purchased on Nykaa...
+
+Query : 'My payment failed but money was deducted.'
+Route : policy | Type: policy_answer | Confidence: 0.456
+Answer: source account within 3 to 5 banking days without requiring manual intervention. Customers may retry...
+
+Query : 'What is the stock price of Apple today?'
+Route : policy | Type: fallback | Confidence: 0.163
+Answer: I don't have enough grounded information from the knowledge base to answer that confidently. Could y...
+
+
+--- 2. Order Route Verification ---
+Query           : 'Where is my order NYK-00001?'
+Route           : order | Order ID: NYK-00001
+Response Type   : order_status
+Escalation Score: 0.693
+Answer          : Order NYK-00001 is currently placed with an order value of INR 2301.65.
+
+Query           : 'Has NYK-00002 been delivered yet?'
+Route           : order | Order ID: NYK-00002
+Response Type   : order_status
+Escalation Score: 0.24
+Answer          : Order NYK-00002 is currently delivered with an order value of INR 2998.61.
+
+Query           : 'Check status for NYK-00003 please'
+Route           : order | Order ID: NYK-00003
+Response Type   : order_status
+Escalation Score: 0.0
+Answer          : Order NYK-00003 is currently shipped with an order value of INR 2822.56.
+
+Query           : 'Where is my delayed package NYK-00007?'
+Route           : order | Order ID: NYK-00007
+Response Type   : order_status
+Escalation Score: 0.933
+Answer          : Order NYK-00007 is currently returned with an order value of INR 3255.39.
+
+Query           : 'Status for missing order NYK-99999'
+Route           : order | Order ID: NYK-99999
+Response Type   : order_status
+Escalation Score: None
+Answer          : Order NYK-99999 was not found in our records. Please verify the order number.
+
+
+--- 3. Edge Cases and Ambiguity Verification ---
+Query : 'Order 12345 status please'
+Route : policy | Order ID: None
+Type  : policy_answer | Answer: Any report regarding an item received in a damaged, defective, broken, or tamper...
+
+Query : 'Where is my order?'
+Route : policy | Order ID: None
+Type  : policy_answer | Answer: Customers may request a one-time free size exchange for Apparel and Footwear pro...
+
+Query : ''
+Route : policy | Order ID: None
+Type  : fallback | Answer: I don't have enough grounded information from the knowledge base to answer that ...
+
+Query : '   '
+Route : policy | Order ID: None
+Type  : fallback | Answer: I don't have enough grounded information from the knowledge base to answer that ...
+
+================================================================================
+ONE TOOL PER TURN INVARIANT: PERFECTLY VERIFIED!
+================================================================================
