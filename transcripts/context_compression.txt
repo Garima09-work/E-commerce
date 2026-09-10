@@ -1,0 +1,176 @@
+================================================================================
+          NYKAA ASSIST TASK 24 — CONTEXT COMPRESSION TEST & EVALUATION TRANSCRIPT
+================================================================================
+Timestamp: 2026-09-07T07:53:00Z
+Task: Task 24 — Context Compression for Grounded RAG
+Repository: d:/chole-bhaature
+Python: .venv/Scripts/python.exe
+
+================================================================================
+1. TASK 24 UNIT & INTEGRATION TEST SUITE (agent/context_compression_tests.py)
+================================================================================
+Command: .\.venv\Scripts\python.exe agent/context_compression_tests.py
+
+================================================================================
+         NYKAA ASSIST TASK 24 — CONTEXT COMPRESSION TEST SUITE                  
+================================================================================
+[PASSED] T24-1 Basic relevant sentence extraction successfully isolated target policy rules!
+[PASSED] T24-2 Clearly irrelevant electronics sentence removed from beauty returns query!
+[PASSED] T24-3 Packaging and tags condition strictly preserved for condition inquiry!
+[PASSED] T24-4 15-day numerical constraint preserved without adopting user query numbers!
+[PASSED] T24-5 Hygiene exception and strictly non-returnable rule strictly preserved!
+[PASSED] T24-6 Non-invention invariant verified: 100% of compressed sentences are verbatim source sentences!
+[PASSED] T24-7 Determinism verified: 100 identical repeated compression runs produced identical output!
+[PASSED] T24-8 Original context preserved alongside compressed context without in-place destruction!
+[PASSED] T24-9 Provenance, metadata, chunk ID, and similarity signals 100% preserved!
+[PASSED] T24-10 Empty context and empty query safely handled without crashing!
+[PASSED] T24-11 Malformed candidates safely handled through fail-open fallback!
+[PASSED] T24-12 Compressor exception fails open to original context as required by safety contract!
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 1949.90it/s]
+[PASSED] T24-13 Knowledge Gate seamlessly evaluates compressed candidates with authoritative similarity!
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 2193.09it/s]
+[PASSED] T24-14 Grounded policy answer correctly generated from compressed context!
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 2320.37it/s]
+[PASSED] T24-15 Out-of-scope query cleanly reaches Knowledge Gate fallback with compression active!
+[PASSED] T24-16 Prompt injection blocked upstream by input guardrails before compression!
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 3473.22it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 1688.94it/s]
+[PASSED] T24-17 Multi-turn rewritten query operates seamlessly with Context Compression!
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 2726.19it/s]
+[PASSED] T24-18 Human escalation behavior remains 100% intact with Context Compression!
+================================================================================
+         TASK 24 — ALL 18 CONTEXT COMPRESSION TESTS PASSED!                     
+================================================================================
+
+================================================================================
+2. TASK 24 EMPIRICAL EVALUATION (eval/context_compression_evaluation.py)
+================================================================================
+Command: .\.venv\Scripts\python.exe eval/context_compression_evaluation.py
+
+================================================================================
+      NYKAA ASSIST TASK 24 — CONTEXT COMPRESSION EVALUATION REPORT              
+================================================================================
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 1286.48it/s]
+
+--- 1. In-Scope Benchmark Evaluation (15 Queries) ---
+[Q01] COMPRESSED | Ratio: 18.0% | Triad A: 0.909 -> B: 0.911 | Query: 'Can I return cosmetic products or opened perfumes?...'
+[Q02] UNCHANGED | Ratio: 0.0% | Triad A: 0.818 -> B: 0.818 | Query: 'How long does a Cash on Delivery refund take to credit ...'
+[Q03] UNCHANGED | Ratio: 0.0% | Triad A: 0.865 -> B: 0.865 | Query: 'What are the standard delivery timelines for metropolit...'
+[Q04] COMPRESSED | Ratio: 1.7% | Triad A: 0.770 -> B: 0.771 | Query: 'When will the courier agent come to pick up my returned...'
+[Q05] COMPRESSED | Ratio: 6.0% | Triad A: 0.823 -> B: 0.827 | Query: 'Is there a manufacturer warranty on electric hair styli...'
+[Q06] UNCHANGED | Ratio: 0.0% | Triad A: 0.773 -> B: 0.773 | Query: 'Can I cancel my order before it gets dispatched from th...'
+[Q07] COMPRESSED | Ratio: 3.3% | Triad A: 0.911 -> B: 0.913 | Query: 'How do I earn and redeem Nykaa reward points at checkou...'
+[Q08] COMPRESSED | Ratio: 37.3% | Triad A: 0.831 -> B: 0.825 | Query: 'My bank account was debited but my order confirmation f...'
+[Q09] UNCHANGED | Ratio: 0.0% | Triad A: 0.870 -> B: 0.870 | Query: 'Can I exchange my footwear for a different size?...'
+[Q10] COMPRESSED | Ratio: 1.7% | Triad A: 0.654 -> B: 0.655 | Query: 'I received a broken cosmetics bottle in my parcel....'
+[Q11] UNCHANGED | Ratio: 0.0% | Triad A: 0.861 -> B: 0.861 | Query: 'Does Nykaa ship internationally and who pays the custom...'
+[Q12] COMPRESSED | Ratio: 17.9% | Triad A: 0.783 -> B: 0.784 | Query: 'Under what circumstances is an issue escalated to a hum...'
+[Q13] COMPRESSED | Ratio: 18.0% | Triad A: 0.866 -> B: 0.873 | Query: 'Can I return intimate wear or lingerie?...'
+[Q14] UNCHANGED | Ratio: 0.0% | Triad A: 0.912 -> B: 0.912 | Query: 'What happens if the replacement size for my footwear is...'
+[Q15] COMPRESSED | Ratio: 59.8% | Triad A: 0.689 -> B: 0.693 | Query: 'When can I refuse delivery at my doorstep if I changed ...'
+
+--- 2. Out-of-Scope Fallback Verification (5 Queries) ---
+OOS Fallback Accuracy Stage A: 5/5 | Stage B: 5/5
+
+--- 3. Adversarial / Edge Query Verification (5 Queries) ---
+Adversarial Fallback Stage A: 4/5 | Stage B: 4/5
+
+================================================================================
+                    SIDE-BY-SIDE EVALUATION METRICS                             
+================================================================================
+Metric                     | Stage A (Baseline) | Stage B (+Compressor) | Delta
+--------------------------------------------------------------------------------
+Precision@3                | 0.600              | 0.600                 | 0.000
+Recall@3                   | 1.000              | 1.000                 | 0.000
+Top-1 Accuracy             | 1.000              | 1.000                 | 0.000
+Context Relevance          | 0.837              | 0.837                 | +0.000
+Groundedness               | 1.000              | 1.000                 | +0.000
+Answer Relevance           | 0.630              | 0.633                 | +0.003
+Overall Triad              | 0.822              | 0.823                 | +0.001
+Fallback Recall            | 0.900              | 0.900                 | +0.000
+False Fallback Rate        | 0.000              | 0.000                 | +0.000
+--------------------------------------------------------------------------------
+Original Context Chars     | 9357               | 9357                  | 0
+Compressed Context Chars   | 9357               | 8322                  | -1035
+Char Compression Ratio     | 0.000              | 0.111                 | +0.111 (11.1%)
+Original Context Words     | 1394               | 1394                  | 0
+Compressed Context Words   | 1394               | 1239                  | -155
+Word Compression Ratio     | 0.000              | 0.111                 | +0.111 (11.1%)
+================================================================================
+
+Machine-readable evaluation saved to: D:\chole-bhaature\eval\context_compression_results.json
+
+================================================================================
+3. REGRESSION TEST RUN: KNOWLEDGE GATE (agent/knowledge_gate_tests.py)
+================================================================================
+Command: .\.venv\Scripts\python.exe agent/knowledge_gate_tests.py
+Result: 16/16 Passed (100.0%)
+
+================================================================================
+4. REGRESSION TEST RUN: HITL ESCALATION (agent/escalation_tests.py)
+================================================================================
+Command: .\.venv\Scripts\python.exe agent/escalation_tests.py
+Result: 16/16 Passed (100.0%)
+
+================================================================================
+5. REGRESSION TEST RUN: MULTI-TOOL MCP (agent/mcp_integration_tests.py)
+================================================================================
+Command: .\.venv\Scripts\python.exe agent/mcp_integration_tests.py
+Result: 16/16 Passed (100.0%)
+
+================================================================================
+6. REGRESSION TEST RUN: RESILIENCE & TIMEOUTS (agent/resilience_tests.py)
+================================================================================
+Command: .\.venv\Scripts\python.exe agent/resilience_tests.py
+Result: 16/16 Passed (100.0%)
+
+================================================================================
+7. REGRESSION TEST RUN: MASTER INTEGRATION (agent/integration_tests.py)
+================================================================================
+Command: .\.venv\Scripts\python.exe agent/integration_tests.py
+Result: 16/16 Passed (100.0%)
+
+================================================================================
+8. REGRESSION TEST RUN: MASTER 50-QUERY BENCHMARK (eval/final_regression.py)
+================================================================================
+Command: .\.venv\Scripts\python.exe eval/final_regression.py
+Result: 50/50 Passed (100.0%)
+  total_queries: 50
+  overall_passed: 50
+  overall_pass_rate: 1.0
+  schema_valid_count: 50
+  schema_valid_rate: 1.0
+  in_scope_policy_top1_count: 15
+  in_scope_policy_top1_rate: 1.0
+  fallback_recall_count: 10
+  fallback_recall_rate: 1.0
+  operational_routing_count: 19
+  operational_routing_rate: 1.0
+  security_isolation_count: 3
+  security_isolation_rate: 1.0
+  duplicate_rmas_created: 0
+  pii_leaks_detected: 0
+  hitl_precision: 1.0
+  hitl_recall: 1.0
+  flaky_retry_recovery_rate: 1.0
+  timeout_clean_abort_rate: 1.0
+
+================================================================================
+9. CODEBASE INTEGRITY & CONSTRAINT AUDIT
+================================================================================
+Zero-Comment Audit:
+Command: git diff HEAD -- "*.py" | Select-String -Pattern '^\+\s*#'
+Result: 0 comments added. Clean.
+
+Protected Files Audit:
+- dataset.py: Untouched
+- orders.json: Untouched
+- orders.csv: Untouched
+- requirements.txt: Untouched
+
+================================================================================
+10. FINAL STATUS
+================================================================================
+Status: ALL TESTS AND REGRESSIONS PASSED CLEANLY.
+Task 24 (Context Compression for Grounded RAG) complete and fully verified.
+No GitHub operations performed.
