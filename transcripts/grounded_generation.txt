@@ -1,0 +1,104 @@
+$ .venv\Scripts\python.exe rag/generate.py
+================================================================================
+           NYKAA ASSIST TASK 4 — GROUNDED GENERATION & CALIBRATION              
+================================================================================
+Collection in use      : nykaa_kb_sentence
+Embedding model        : all-MiniLM-L6-v2
+Calibrated Threshold   : 0.35
+--------------------------------------------------------------------------------
+
+--- Testing Grounded (In-Scope) Queries ---
+[PASSED] Query     : 'Can I return this product?'
+         Confidence: 0.543 | Sources: ['return_window.md']
+         Type      : policy_answer
+         Answer    : For hygiene and safety reasons, intimate wear, innerwear, opened fragrances, and customized personal care items are strictly non-returnable. Electronics and home lifestyle products carry a 7-day return window from the date of confirmed delivery. Customers may initiate a return request within 15 days of delivery for eligible Beauty, Apparel, and Footwear items. Unopened cosmetic products, skincare essentials, and unworn clothing with original tags and packaging intact qualify for a full return.
+
+[PASSED] Query     : 'When will I get my refund for COD orders?'
+         Confidence: 0.690 | Sources: ['cod_refund_timelines.md', 'cancellation_policy.md']
+         Type      : policy_answer
+         Answer    : Refunds for orders paid via Cash on Delivery (COD) are processed directly into the customer's verified bank account or credited as Nykaa store credits within 5 to 7 business days following quality verification at our fulfillment center. Customers must provide their Bank Account Number and IFSC code through the support portal or checkout returns interface to receive direct bank transfers. For cancelled prepaid orders paid via credit card, debit card, UPI, or net banking, refunds are initiated immediately and reflect in the original payment source within 3 to 5 business days.
+
+[PASSED] Query     : 'What are the delivery timelines for metro cities?'
+         Confidence: 0.706 | Sources: ['delivery_sla.md']
+         Type      : policy_answer
+         Answer    : Standard delivery across metro cities is fulfilled within 2 to 4 business days from the order placement date. Non-metro locations, tier-2, and tier-3 regions typically require 4 to 7 business days depending on courier accessibility and regional logistics. Express next-day delivery is available for select pin codes in Tier-1 metropolitan areas on orders placed before 2:00 PM IST. Any shipment experiencing dispatch delays exceeding 48 hours is automatically flagged in the logistics tracking system with an updated delivery estimate.
+
+[PASSED] Query     : 'How does reverse pickup scheduling work?'
+         Confidence: 0.551 | Sources: ['reverse_pickup.md']
+         Type      : policy_answer
+         Answer    : Once an eligible return or exchange request is authorized, a reverse pickup courier agent will be dispatched to the delivery address within 24 to 48 business hours. Customers must securely hand over the item in its original brand box, complete with all price tags, manuals, protective packaging, and free promotional gifts included with the purchase. The pickup executive inspects the basic physical condition of the package and issues a digital pickup receipt upon collection. If the courier partner is unable to reach the customer after two consecutive attempts, the pickup request is cancelled and must be re-initiated through support.
+
+[PASSED] Query     : 'What is the warranty period for grooming appliances?'
+         Confidence: 0.610 | Sources: ['warranty_terms.md']
+         Type      : policy_answer
+         Answer    : Electronic styling tools, personal grooming appliances, and tech wellness devices purchased on Nykaa carry a standard 1-year to 2-year manufacturer warranty against manufacturing defects. The official manufacturer warranty card, intact serial number, and original Nykaa invoice serve as valid proof of purchase for warranty claims. Damage resulting from accidental drops, liquid contact, physical tampering, unauthorized repairs, or normal daily cosmetic wear and tear is not covered under warranty. Warranty fulfillment and servicing are executed through authorized brand service centers.
+
+[PASSED] Query     : 'Can I cancel my order before dispatch?'
+         Confidence: 0.684 | Sources: ['cancellation_policy.md', 'payment_failure_retry.md']
+         Type      : policy_answer
+         Answer    : Customers can cancel an order free of charge at any stage before the shipment has been dispatched from our fulfillment center. Once an order status transitions to Shipped or In-Transit, direct digital cancellation is disabled, and the customer should refuse delivery at the doorstep. Customers may retry placing the order using an alternate payment method such as UPI, saved cards, or Cash on Delivery while the reversal settles. If the deducted amount is not restored within 7 business days, the customer should share their transaction reference number with support for banking reconciliation.
+
+[PASSED] Query     : 'How do I earn and redeem reward points?'
+         Confidence: 0.553 | Sources: ['loyalty_points.md']
+         Type      : policy_answer
+         Answer    : Customers earn 1 Nykaa Reward Point for every 100 rupees spent on completed and delivered orders across all product categories. Accumulated reward points can be redeemed during checkout, where each point offers a direct discount of 1 rupee on eligible catalog purchases. Loyalty points remain valid for 12 months from the date of credit and automatically lapse if unutilized. If an order is returned or refunded, the reward points credited for that transaction are debited from the customer's loyalty balance.
+
+[PASSED] Query     : 'My payment failed but money was deducted from my account.'
+         Confidence: 0.499 | Sources: ['payment_failure_retry.md']
+         Type      : policy_answer
+         Answer    : Customers may retry placing the order using an alternate payment method such as UPI, saved cards, or Cash on Delivery while the reversal settles. If the deducted amount is not restored within 7 business days, the customer should share their transaction reference number with support for banking reconciliation. If payment debits from your bank account or digital wallet but the order confirmation fails to generate, the payment gateway initiates an automated reversal within 24 to 48 hours. Depending on the issuing bank, funds typically credit back to the source account within 3 to 5 banking days without requiring manual intervention.
+
+[PASSED] Query     : 'Can I exchange my shoes for another size?'
+         Confidence: 0.604 | Sources: ['size_exchange.md']
+         Type      : policy_answer
+         Answer    : Customers may request a one-time free size exchange for Apparel and Footwear products within 7 days of package delivery. Size exchange requests are subject to replacement inventory availability in the requested variant size at the designated warehouse. If the desired replacement size is out of stock, a standard return is processed, and the full order value is refunded to the original payment method. Exchanged items must remain unused, unwashed, odor-free, and returned with all original tags and shoe boxes intact.
+
+[PASSED] Query     : 'I received a damaged and broken bottle.'
+         Confidence: 0.397 | Sources: ['warranty_terms.md', 'damaged_item_claims.md']
+         Type      : policy_answer
+         Answer    : Damage resulting from accidental drops, liquid contact, physical tampering, unauthorized repairs, or normal daily cosmetic wear and tear is not covered under warranty. Warranty fulfillment and servicing are executed through authorized brand service centers. Any report regarding an item received in a damaged, defective, broken, or tampered condition must be submitted within 48 hours of confirmed delivery. Customers must provide clear photographs of the outer shipping box, the damaged product, and the batch code or barcode label attached to the product packaging.
+
+[PASSED] Query     : 'How long does international delivery take and what about customs?'
+         Confidence: 0.569 | Sources: ['international_shipping.md']
+         Type      : policy_answer
+         Answer    : All applicable customs duties, import tariffs, and local taxes are determined by the destination country's regulations and must be paid by the recipient upon delivery. Due to cross-border transit constraints and customs regulations, international orders are strictly non-returnable, non-exchangeable, and ineligible for Cash on Delivery. Nykaa ships select Beauty and Wellness products to over 20 international destinations through premier global courier partners. International orders typically reach destination addresses within 7 to 14 business days, subject to local customs clearance procedures and regional aviation schedules.
+
+[PASSED] Query     : 'What is the customer support escalation process?'
+         Confidence: 0.683 | Sources: ['escalation_matrix.md']
+         Type      : policy_answer
+         Answer    : The escalation matrix establishes mandatory overrides where conversations immediately transfer to a senior human support specialist regardless of automated scores. Hard escalation triggers include explicit allegations of financial fraud, repeated failed payment disputes exceeding 7 days, verified counterfeit product claims, and direct customer requests to speak with a human agent. Escalated cases are assigned a high-priority incident ticket and receive specialized agent outreach within 2 hours. Routine inquiries regarding standard tracking, return policies, and product details remain handled by automated support.
+
+--- Testing Ungrounded (Out-of-Scope) Queries ---
+[PASSED] Query     : 'What is the capital of France?'
+         Confidence: 0.065 | Sources: []
+         Type      : fallback
+         Answer    : I don't have enough grounded information from the knowledge base to answer that confidently. Could you rephrase, or would you like this escalated to a support agent?
+
+[PASSED] Query     : 'What is the weather in Delhi today?'
+         Confidence: 0.158 | Sources: []
+         Type      : fallback
+         Answer    : I don't have enough grounded information from the knowledge base to answer that confidently. Could you rephrase, or would you like this escalated to a support agent?
+
+[PASSED] Query     : 'How do I write a quicksort algorithm in Python?'
+         Confidence: 0.078 | Sources: []
+         Type      : fallback
+         Answer    : I don't have enough grounded information from the knowledge base to answer that confidently. Could you rephrase, or would you like this escalated to a support agent?
+
+[PASSED] Query     : 'Who directed the movie Inception?'
+         Confidence: 0.059 | Sources: []
+         Type      : fallback
+         Answer    : I don't have enough grounded information from the knowledge base to answer that confidently. Could you rephrase, or would you like this escalated to a support agent?
+
+[PASSED] Query     : 'What is the stock price of Apple today?'
+         Confidence: 0.148 | Sources: []
+         Type      : fallback
+         Answer    : I don't have enough grounded information from the knowledge base to answer that confidently. Could you rephrase, or would you like this escalated to a support agent?
+
+--------------------------------------------------------------------------------
+                      CALIBRATION SUMMARY METRICS                               
+--------------------------------------------------------------------------------
+In-Scope Similarity Range   : [0.397, 0.706] (Mean: 0.591)
+Out-of-Scope Similarity Range: [0.059, 0.158] (Mean: 0.102)
+Observed Separation Margin  : 0.239
+Calibrated Threshold Choice : 0.35 (Positioned securely between 0.158 and 0.397)
+================================================================================
