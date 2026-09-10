@@ -1,0 +1,44 @@
+$ .venv\Scripts\python.exe rag/embed_index.py
+Starting dual chunking and ChromaDB indexing...
+Indexing completed successfully.
+  Documents Loaded         : 12
+  Fixed Chunks Indexed     : 26 (Collection: nykaa_kb_fixed)
+  Sentence Chunks Indexed  : 24 (Collection: nykaa_kb_sentence)
+
+========================================================
+        CHROMA DUAL COLLECTION RETRIEVAL SMOKE TEST       
+========================================================
+
+Query: 'Can I return this product?'
+  [Fixed Collection]    Top: return_window.md           (Cosine Sim: 0.523)
+  [Sentence Collection] Top: return_window.md           (Cosine Sim: 0.543)
+
+Query: 'When will I get my refund?'
+  [Fixed Collection]    Top: cancellation_policy.md     (Cosine Sim: 0.532)
+  [Sentence Collection] Top: cancellation_policy.md     (Cosine Sim: 0.532)
+
+Query: 'Can I cancel my order?'
+  [Fixed Collection]    Top: cancellation_policy.md     (Cosine Sim: 0.725)
+  [Sentence Collection] Top: cancellation_policy.md     (Cosine Sim: 0.737)
+
+Query: 'My payment failed but money was deducted.'
+  [Fixed Collection]    Top: payment_failure_retry.md   (Cosine Sim: 0.456)
+  [Sentence Collection] Top: payment_failure_retry.md   (Cosine Sim: 0.519)
+
+Query: 'I received a damaged product.'
+  [Fixed Collection]    Top: damaged_item_claims.md     (Cosine Sim: 0.451)
+  [Sentence Collection] Top: damaged_item_claims.md     (Cosine Sim: 0.467)
+
+Query: 'Can I exchange my shoes for another size?'
+  [Fixed Collection]    Top: size_exchange.md           (Cosine Sim: 0.601)
+  [Sentence Collection] Top: size_exchange.md           (Cosine Sim: 0.604)
+
+Query: 'How long does international delivery take?'
+  [Fixed Collection]    Top: international_shipping.md  (Cosine Sim: 0.567)
+  [Sentence Collection] Top: international_shipping.md  (Cosine Sim: 0.557)
+
+Query: 'What is the warranty on my hair dryer?'
+  [Fixed Collection]    Top: warranty_terms.md          (Cosine Sim: 0.493)
+  [Sentence Collection] Top: warranty_terms.md          (Cosine Sim: 0.498)
+
+========================================================
