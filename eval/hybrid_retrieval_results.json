@@ -1,0 +1,1709 @@
+{
+  "semantic_baseline": {
+    "total_queries": 15,
+    "mean_precision_at_3": 0.6,
+    "mean_recall_at_3": 1.0,
+    "top_1_accuracy": 0.8,
+    "avg_context_relevance": 0.851,
+    "avg_groundedness": 0.76,
+    "avg_answer_relevance": 0.63,
+    "avg_overall_triad": 0.747,
+    "cr_pass_rate": 1.0,
+    "g_pass_rate": 0.6,
+    "ar_pass_rate": 0.6,
+    "overall_pass_rate": 0.4
+  },
+  "hybrid_candidate": {
+    "total_queries": 15,
+    "mean_precision_at_3": 0.578,
+    "mean_recall_at_3": 1.0,
+    "top_1_accuracy": 1.0,
+    "avg_context_relevance": 0.801,
+    "avg_groundedness": 0.883,
+    "avg_answer_relevance": 0.63,
+    "avg_overall_triad": 0.771,
+    "cr_pass_rate": 1.0,
+    "g_pass_rate": 0.8,
+    "ar_pass_rate": 0.6,
+    "overall_pass_rate": 0.533
+  },
+  "delta": {
+    "precision_at_3": {
+      "baseline": 0.6,
+      "candidate": 0.578,
+      "delta": -0.022,
+      "delta_percent": -3.7
+    },
+    "recall_at_3": {
+      "baseline": 1.0,
+      "candidate": 1.0,
+      "delta": 0.0,
+      "delta_percent": 0.0
+    },
+    "top_1_accuracy": {
+      "baseline": 0.8,
+      "candidate": 1.0,
+      "delta": 0.2,
+      "delta_percent": 25.0
+    },
+    "context_relevance": {
+      "baseline": 0.851,
+      "candidate": 0.801,
+      "delta": -0.05,
+      "delta_percent": -5.9
+    },
+    "groundedness": {
+      "baseline": 0.76,
+      "candidate": 0.883,
+      "delta": 0.123,
+      "delta_percent": 16.2
+    },
+    "answer_relevance": {
+      "baseline": 0.63,
+      "candidate": 0.63,
+      "delta": 0.0,
+      "delta_percent": 0.0
+    },
+    "overall_triad": {
+      "baseline": 0.747,
+      "candidate": 0.771,
+      "delta": 0.024,
+      "delta_percent": 3.2
+    }
+  },
+  "improved_queries": [
+    "Q02",
+    "Q04",
+    "Q06",
+    "Q10",
+    "Q15"
+  ],
+  "regressed_queries": [
+    "Q07"
+  ],
+  "neutral_queries": [
+    "Q01",
+    "Q03",
+    "Q05",
+    "Q08",
+    "Q09",
+    "Q11",
+    "Q12",
+    "Q13",
+    "Q14"
+  ],
+  "per_query_comparison": [
+    {
+      "id": "Q01",
+      "topic": "returns",
+      "expected_source": "return_window.md",
+      "semantic_retrieved_k3": [
+        "return_window.md",
+        "return_window.md",
+        "size_exchange.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "return_window.md",
+        "return_window.md",
+        "damaged_item_claims.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.909,
+      "hybrid_triad": 0.909,
+      "triad_delta": 0.0,
+      "outcome": "neutral"
+    },
+    {
+      "id": "Q02",
+      "topic": "cod_refunds",
+      "expected_source": "cod_refund_timelines.md",
+      "semantic_retrieved_k3": [
+        "cancellation_policy.md",
+        "cod_refund_timelines.md",
+        "payment_failure_retry.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "cod_refund_timelines.md",
+        "payment_failure_retry.md",
+        "cancellation_policy.md"
+      ],
+      "semantic_top1": false,
+      "hybrid_top1": true,
+      "semantic_triad": 0.493,
+      "hybrid_triad": 0.487,
+      "triad_delta": -0.006,
+      "outcome": "improved"
+    },
+    {
+      "id": "Q03",
+      "topic": "delivery",
+      "expected_source": "delivery_sla.md",
+      "semantic_retrieved_k3": [
+        "delivery_sla.md",
+        "delivery_sla.md",
+        "reverse_pickup.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "delivery_sla.md",
+        "delivery_sla.md",
+        "size_exchange.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.865,
+      "hybrid_triad": 0.865,
+      "triad_delta": 0.0,
+      "outcome": "neutral"
+    },
+    {
+      "id": "Q04",
+      "topic": "reverse_pickup",
+      "expected_source": "reverse_pickup.md",
+      "semantic_retrieved_k3": [
+        "reverse_pickup.md",
+        "reverse_pickup.md",
+        "return_window.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "reverse_pickup.md",
+        "damaged_item_claims.md",
+        "reverse_pickup.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.625,
+      "hybrid_triad": 0.77,
+      "triad_delta": 0.145,
+      "outcome": "improved"
+    },
+    {
+      "id": "Q05",
+      "topic": "warranty",
+      "expected_source": "warranty_terms.md",
+      "semantic_retrieved_k3": [
+        "warranty_terms.md",
+        "warranty_terms.md",
+        "return_window.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "warranty_terms.md",
+        "warranty_terms.md",
+        "return_window.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.823,
+      "hybrid_triad": 0.823,
+      "triad_delta": 0.0,
+      "outcome": "neutral"
+    },
+    {
+      "id": "Q06",
+      "topic": "cancellation",
+      "expected_source": "cancellation_policy.md",
+      "semantic_retrieved_k3": [
+        "cancellation_policy.md",
+        "cancellation_policy.md",
+        "reverse_pickup.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "cancellation_policy.md",
+        "reverse_pickup.md",
+        "size_exchange.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.713,
+      "hybrid_triad": 0.773,
+      "triad_delta": 0.06,
+      "outcome": "improved"
+    },
+    {
+      "id": "Q07",
+      "topic": "loyalty_points",
+      "expected_source": "loyalty_points.md",
+      "semantic_retrieved_k3": [
+        "loyalty_points.md",
+        "cod_refund_timelines.md",
+        "temp_shipping_faq.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "loyalty_points.md",
+        "temp_shipping_faq.md",
+        "loyalty_points.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.69,
+      "hybrid_triad": 0.678,
+      "triad_delta": -0.012,
+      "outcome": "regressed"
+    },
+    {
+      "id": "Q08",
+      "topic": "payment_failure",
+      "expected_source": "payment_failure_retry.md",
+      "semantic_retrieved_k3": [
+        "payment_failure_retry.md",
+        "payment_failure_retry.md",
+        "cancellation_policy.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "payment_failure_retry.md",
+        "payment_failure_retry.md",
+        "cod_refund_timelines.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.831,
+      "hybrid_triad": 0.831,
+      "triad_delta": 0.0,
+      "outcome": "neutral"
+    },
+    {
+      "id": "Q09",
+      "topic": "size_exchange",
+      "expected_source": "size_exchange.md",
+      "semantic_retrieved_k3": [
+        "size_exchange.md",
+        "size_exchange.md",
+        "return_window.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "size_exchange.md",
+        "size_exchange.md",
+        "return_window.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.87,
+      "hybrid_triad": 0.87,
+      "triad_delta": 0.0,
+      "outcome": "neutral"
+    },
+    {
+      "id": "Q10",
+      "topic": "damaged_items",
+      "expected_source": "damaged_item_claims.md",
+      "semantic_retrieved_k3": [
+        "return_window.md",
+        "damaged_item_claims.md",
+        "damaged_item_claims.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "damaged_item_claims.md",
+        "size_exchange.md",
+        "reverse_pickup.md"
+      ],
+      "semantic_top1": false,
+      "hybrid_top1": true,
+      "semantic_triad": 0.469,
+      "hybrid_triad": 0.654,
+      "triad_delta": 0.185,
+      "outcome": "improved"
+    },
+    {
+      "id": "Q11",
+      "topic": "international_shipping",
+      "expected_source": "international_shipping.md",
+      "semantic_retrieved_k3": [
+        "international_shipping.md",
+        "international_shipping.md",
+        "temp_shipping_faq.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "international_shipping.md",
+        "international_shipping.md",
+        "temp_shipping_faq.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.861,
+      "hybrid_triad": 0.861,
+      "triad_delta": 0.0,
+      "outcome": "neutral"
+    },
+    {
+      "id": "Q12",
+      "topic": "escalation",
+      "expected_source": "escalation_matrix.md",
+      "semantic_retrieved_k3": [
+        "escalation_matrix.md",
+        "escalation_matrix.md",
+        "reverse_pickup.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "escalation_matrix.md",
+        "escalation_matrix.md",
+        "warranty_terms.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.783,
+      "hybrid_triad": 0.783,
+      "triad_delta": 0.0,
+      "outcome": "neutral"
+    },
+    {
+      "id": "Q13",
+      "topic": "returns_hygiene",
+      "expected_source": "return_window.md",
+      "semantic_retrieved_k3": [
+        "return_window.md",
+        "return_window.md",
+        "size_exchange.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "return_window.md",
+        "return_window.md",
+        "size_exchange.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.867,
+      "hybrid_triad": 0.866,
+      "triad_delta": -0.001,
+      "outcome": "neutral"
+    },
+    {
+      "id": "Q14",
+      "topic": "size_exchange_stock",
+      "expected_source": "size_exchange.md",
+      "semantic_retrieved_k3": [
+        "size_exchange.md",
+        "size_exchange.md",
+        "return_window.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "size_exchange.md",
+        "size_exchange.md",
+        "return_window.md"
+      ],
+      "semantic_top1": true,
+      "hybrid_top1": true,
+      "semantic_triad": 0.912,
+      "hybrid_triad": 0.912,
+      "triad_delta": 0.0,
+      "outcome": "neutral"
+    },
+    {
+      "id": "Q15",
+      "topic": "cancellation_doorstep",
+      "expected_source": "cancellation_policy.md",
+      "semantic_retrieved_k3": [
+        "reverse_pickup.md",
+        "cancellation_policy.md",
+        "reverse_pickup.md"
+      ],
+      "hybrid_retrieved_k3": [
+        "cancellation_policy.md",
+        "delivery_sla.md",
+        "delivery_sla.md"
+      ],
+      "semantic_top1": false,
+      "hybrid_top1": true,
+      "semantic_triad": 0.492,
+      "hybrid_triad": 0.486,
+      "triad_delta": -0.006,
+      "outcome": "improved"
+    }
+  ],
+  "semantic_detailed_results": [
+    {
+      "id": "Q01",
+      "query": "Can I return cosmetic products or opened perfumes?",
+      "topic": "returns",
+      "expected_sources": [
+        "return_window.md"
+      ],
+      "retrieved_sources_k3": [
+        "return_window.md",
+        "return_window.md",
+        "size_exchange.md"
+      ],
+      "retrieved_sources_gen": [
+        "return_window.md",
+        "return_window.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.695,
+      "response_type": "policy_answer",
+      "context_relevance": 0.979,
+      "groundedness": 1.0,
+      "answer_relevance": 0.749,
+      "triad_score": 0.909,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.664,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.715,
+        "kw_overlap": 0.8
+      },
+      "answer_preview": "Customers may initiate a return request within 15 days of delivery for elig..."
+    },
+    {
+      "id": "Q02",
+      "query": "How long does a Cash on Delivery refund take to credit to my bank account?",
+      "topic": "cod_refunds",
+      "expected_sources": [
+        "cod_refund_timelines.md"
+      ],
+      "retrieved_sources_k3": [
+        "cancellation_policy.md",
+        "cod_refund_timelines.md",
+        "payment_failure_retry.md"
+      ],
+      "retrieved_sources_gen": [
+        "cancellation_policy.md",
+        "cod_refund_timelines.md"
+      ],
+      "precision_at_3": 0.333,
+      "recall_at_3": 1.0,
+      "hit_top_1": false,
+      "confidence": 0.567,
+      "response_type": "policy_answer",
+      "context_relevance": 0.64,
+      "groundedness": 0.25,
+      "answer_relevance": 0.589,
+      "triad_score": 0.493,
+      "cr_audit": {
+        "source_match_ratio": 0.5,
+        "mean_similarity": 0.595,
+        "relevant_chunks": 1,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 1,
+        "total_claims": 4,
+        "unsupported": [
+          "Customers must provide their Bank Account Number and IFSC co",
+          "Once initiated, the bank reference number (UTR) is shared vi",
+          "Store credit refunds are credited instantly upon return insp"
+        ]
+      },
+      "ar_audit": {
+        "sem_sim": 0.565,
+        "kw_overlap": 0.625
+      },
+      "answer_preview": "Refunds for orders paid via Cash on Delivery (COD) are processed directly i..."
+    },
+    {
+      "id": "Q03",
+      "query": "What are the standard delivery timelines for metropolitan cities?",
+      "topic": "delivery",
+      "expected_sources": [
+        "delivery_sla.md"
+      ],
+      "retrieved_sources_k3": [
+        "delivery_sla.md",
+        "delivery_sla.md",
+        "reverse_pickup.md"
+      ],
+      "retrieved_sources_gen": [
+        "delivery_sla.md",
+        "delivery_sla.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.622,
+      "response_type": "policy_answer",
+      "context_relevance": 0.907,
+      "groundedness": 1.0,
+      "answer_relevance": 0.689,
+      "triad_score": 0.865,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.536,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.616,
+        "kw_overlap": 0.8
+      },
+      "answer_preview": "Standard delivery across metro cities is fulfilled within 2 to 4 business d..."
+    },
+    {
+      "id": "Q04",
+      "query": "When will the courier agent come to pick up my returned item?",
+      "topic": "reverse_pickup",
+      "expected_sources": [
+        "reverse_pickup.md"
+      ],
+      "retrieved_sources_k3": [
+        "reverse_pickup.md",
+        "reverse_pickup.md",
+        "return_window.md"
+      ],
+      "retrieved_sources_gen": [
+        "reverse_pickup.md",
+        "reverse_pickup.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.757,
+      "response_type": "policy_answer",
+      "context_relevance": 0.968,
+      "groundedness": 0.25,
+      "answer_relevance": 0.656,
+      "triad_score": 0.625,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.644,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 1,
+        "total_claims": 4,
+        "unsupported": [
+          "Customers must securely hand over the item in its original b",
+          "Customers must provide clear photographs of the outer shippi",
+          "Upon rapid"
+        ]
+      },
+      "ar_audit": {
+        "sem_sim": 0.76,
+        "kw_overlap": 0.5
+      },
+      "answer_preview": "Once an eligible return or exchange request is authorized, a reverse pickup..."
+    },
+    {
+      "id": "Q05",
+      "query": "Is there a manufacturer warranty on electric hair styling tools?",
+      "topic": "warranty",
+      "expected_sources": [
+        "warranty_terms.md"
+      ],
+      "retrieved_sources_k3": [
+        "warranty_terms.md",
+        "warranty_terms.md",
+        "return_window.md"
+      ],
+      "retrieved_sources_gen": [
+        "warranty_terms.md",
+        "warranty_terms.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.592,
+      "response_type": "policy_answer",
+      "context_relevance": 0.904,
+      "groundedness": 1.0,
+      "answer_relevance": 0.566,
+      "triad_score": 0.823,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.532,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 5,
+        "total_claims": 5,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.562,
+        "kw_overlap": 0.571
+      },
+      "answer_preview": "Electronic styling tools, personal grooming appliances, and tech wellness d..."
+    },
+    {
+      "id": "Q06",
+      "query": "Can I cancel my order before it gets dispatched from the warehouse?",
+      "topic": "cancellation",
+      "expected_sources": [
+        "cancellation_policy.md"
+      ],
+      "retrieved_sources_k3": [
+        "cancellation_policy.md",
+        "cancellation_policy.md",
+        "reverse_pickup.md"
+      ],
+      "retrieved_sources_gen": [
+        "cancellation_policy.md",
+        "cancellation_policy.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.699,
+      "response_type": "policy_answer",
+      "context_relevance": 0.944,
+      "groundedness": 0.5,
+      "answer_relevance": 0.696,
+      "triad_score": 0.713,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.601,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 2,
+        "total_claims": 4,
+        "unsupported": [
+          "For cancelled prepaid orders paid via Once an eligible retur",
+          "Customers must securely hand over the item in its original b"
+        ]
+      },
+      "ar_audit": {
+        "sem_sim": 0.715,
+        "kw_overlap": 0.667
+      },
+      "answer_preview": "Customers can cancel an order free of charge at any stage before the shipme..."
+    },
+    {
+      "id": "Q07",
+      "query": "How do I earn and redeem Nykaa reward points at checkout?",
+      "topic": "loyalty_points",
+      "expected_sources": [
+        "loyalty_points.md"
+      ],
+      "retrieved_sources_k3": [
+        "loyalty_points.md",
+        "cod_refund_timelines.md",
+        "temp_shipping_faq.md"
+      ],
+      "retrieved_sources_gen": [
+        "loyalty_points.md",
+        "cod_refund_timelines.md"
+      ],
+      "precision_at_3": 0.333,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.803,
+      "response_type": "policy_answer",
+      "context_relevance": 0.685,
+      "groundedness": 0.6,
+      "answer_relevance": 0.784,
+      "triad_score": 0.69,
+      "cr_audit": {
+        "source_match_ratio": 0.5,
+        "mean_similarity": 0.673,
+        "relevant_chunks": 1,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 3,
+        "total_claims": 5,
+        "unsupported": [
+          "Loyalty points remain valid for 12 months from the date of c",
+          "If an order is returned or refunded, the reward points credi"
+        ]
+      },
+      "ar_audit": {
+        "sem_sim": 0.751,
+        "kw_overlap": 0.833
+      },
+      "answer_preview": "Customers earn 1 Nykaa Reward Point for every 100 rupees spent on completed..."
+    },
+    {
+      "id": "Q08",
+      "query": "My bank account was debited but my order confirmation failed.",
+      "topic": "payment_failure",
+      "expected_sources": [
+        "payment_failure_retry.md"
+      ],
+      "retrieved_sources_k3": [
+        "payment_failure_retry.md",
+        "payment_failure_retry.md",
+        "cancellation_policy.md"
+      ],
+      "retrieved_sources_gen": [
+        "payment_failure_retry.md",
+        "payment_failure_retry.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.526,
+      "response_type": "policy_answer",
+      "context_relevance": 0.903,
+      "groundedness": 1.0,
+      "answer_relevance": 0.59,
+      "triad_score": 0.831,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.53,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.54,
+        "kw_overlap": 0.667
+      },
+      "answer_preview": "If payment debits from your bank account or digital wallet but the order co..."
+    },
+    {
+      "id": "Q09",
+      "query": "Can I exchange my footwear for a different size?",
+      "topic": "size_exchange",
+      "expected_sources": [
+        "size_exchange.md"
+      ],
+      "retrieved_sources_k3": [
+        "size_exchange.md",
+        "size_exchange.md",
+        "return_window.md"
+      ],
+      "retrieved_sources_gen": [
+        "size_exchange.md",
+        "size_exchange.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.64,
+      "response_type": "policy_answer",
+      "context_relevance": 0.925,
+      "groundedness": 1.0,
+      "answer_relevance": 0.685,
+      "triad_score": 0.87,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.568,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.642,
+        "kw_overlap": 0.75
+      },
+      "answer_preview": "Customers may request a one-time free size exchange for Apparel and Footwea..."
+    },
+    {
+      "id": "Q10",
+      "query": "I received a broken cosmetics bottle in my parcel.",
+      "topic": "damaged_items",
+      "expected_sources": [
+        "damaged_item_claims.md"
+      ],
+      "retrieved_sources_k3": [
+        "return_window.md",
+        "damaged_item_claims.md",
+        "damaged_item_claims.md"
+      ],
+      "retrieved_sources_gen": [
+        "return_window.md",
+        "damaged_item_claims.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": false,
+      "confidence": 0.462,
+      "response_type": "policy_answer",
+      "context_relevance": 0.57,
+      "groundedness": 0.4,
+      "answer_relevance": 0.438,
+      "triad_score": 0.469,
+      "cr_audit": {
+        "source_match_ratio": 0.5,
+        "mean_similarity": 0.472,
+        "relevant_chunks": 1,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 2,
+        "total_claims": 5,
+        "unsupported": [
+          "Upon rapid Customers may request a one-time free size exchan",
+          "Size exchange requests are subject to replacement inventory ",
+          "If the desired replacement size is out of stock, a standard "
+        ]
+      },
+      "ar_audit": {
+        "sem_sim": 0.463,
+        "kw_overlap": 0.4
+      },
+      "answer_preview": "Any report regarding an item received in a damaged, defective, broken, or t..."
+    },
+    {
+      "id": "Q11",
+      "query": "Does Nykaa ship internationally and who pays the customs duty?",
+      "topic": "international_shipping",
+      "expected_sources": [
+        "international_shipping.md"
+      ],
+      "retrieved_sources_k3": [
+        "international_shipping.md",
+        "international_shipping.md",
+        "temp_shipping_faq.md"
+      ],
+      "retrieved_sources_gen": [
+        "international_shipping.md",
+        "international_shipping.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.745,
+      "response_type": "policy_answer",
+      "context_relevance": 0.984,
+      "groundedness": 1.0,
+      "answer_relevance": 0.6,
+      "triad_score": 0.861,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.672,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.778,
+        "kw_overlap": 0.333
+      },
+      "answer_preview": "Nykaa ships select Beauty and Wellness products to over 20 international de..."
+    },
+    {
+      "id": "Q12",
+      "query": "Under what circumstances is an issue escalated to a human supervisor?",
+      "topic": "escalation",
+      "expected_sources": [
+        "escalation_matrix.md"
+      ],
+      "retrieved_sources_k3": [
+        "escalation_matrix.md",
+        "escalation_matrix.md",
+        "reverse_pickup.md"
+      ],
+      "retrieved_sources_gen": [
+        "escalation_matrix.md",
+        "escalation_matrix.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.486,
+      "response_type": "policy_answer",
+      "context_relevance": 0.886,
+      "groundedness": 1.0,
+      "answer_relevance": 0.464,
+      "triad_score": 0.783,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.501,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 5,
+        "total_claims": 5,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.551,
+        "kw_overlap": 0.333
+      },
+      "answer_preview": "and direct customer requests to speak with a human agent. Escalated cases a..."
+    },
+    {
+      "id": "Q13",
+      "query": "Can I return intimate wear or lingerie?",
+      "topic": "returns_hygiene",
+      "expected_sources": [
+        "return_window.md"
+      ],
+      "retrieved_sources_k3": [
+        "return_window.md",
+        "return_window.md",
+        "size_exchange.md"
+      ],
+      "retrieved_sources_gen": [
+        "return_window.md",
+        "return_window.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.598,
+      "response_type": "policy_answer",
+      "context_relevance": 0.93,
+      "groundedness": 1.0,
+      "answer_relevance": 0.67,
+      "triad_score": 0.867,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.577,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.616,
+        "kw_overlap": 0.75
+      },
+      "answer_preview": "Customers may initiate a return request within 15 days of delivery for elig..."
+    },
+    {
+      "id": "Q14",
+      "query": "What happens if the replacement size for my footwear is out of stock?",
+      "topic": "size_exchange_stock",
+      "expected_sources": [
+        "size_exchange.md"
+      ],
+      "retrieved_sources_k3": [
+        "size_exchange.md",
+        "size_exchange.md",
+        "return_window.md"
+      ],
+      "retrieved_sources_gen": [
+        "size_exchange.md",
+        "size_exchange.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.671,
+      "response_type": "policy_answer",
+      "context_relevance": 0.981,
+      "groundedness": 1.0,
+      "answer_relevance": 0.754,
+      "triad_score": 0.912,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.667,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.702,
+        "kw_overlap": 0.833
+      },
+      "answer_preview": "Customers may request a one-time free size exchange for Apparel and Footwea..."
+    },
+    {
+      "id": "Q15",
+      "query": "When can I refuse delivery at my doorstep if I changed my mind?",
+      "topic": "cancellation_doorstep",
+      "expected_sources": [
+        "cancellation_policy.md"
+      ],
+      "retrieved_sources_k3": [
+        "reverse_pickup.md",
+        "cancellation_policy.md",
+        "reverse_pickup.md"
+      ],
+      "retrieved_sources_gen": [
+        "reverse_pickup.md",
+        "cancellation_policy.md"
+      ],
+      "precision_at_3": 0.333,
+      "recall_at_3": 1.0,
+      "hit_top_1": false,
+      "confidence": 0.439,
+      "response_type": "policy_answer",
+      "context_relevance": 0.552,
+      "groundedness": 0.4,
+      "answer_relevance": 0.525,
+      "triad_score": 0.492,
+      "cr_audit": {
+        "source_match_ratio": 0.5,
+        "mean_similarity": 0.44,
+        "relevant_chunks": 1,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 2,
+        "total_claims": 5,
+        "unsupported": [
+          "For cancelled prepaid orders paid via Standard delivery acro",
+          "Non-metro locations, tier-2, and tier-3 regions typically re",
+          "Express next-day delivery is available for select pin codes "
+        ]
+      },
+      "ar_audit": {
+        "sem_sim": 0.476,
+        "kw_overlap": 0.6
+      },
+      "answer_preview": "Customers can cancel an order free of charge at any stage before the shipme..."
+    }
+  ],
+  "hybrid_detailed_results": [
+    {
+      "id": "Q01",
+      "query": "Can I return cosmetic products or opened perfumes?",
+      "topic": "returns",
+      "expected_sources": [
+        "return_window.md"
+      ],
+      "retrieved_sources_k3": [
+        "return_window.md",
+        "return_window.md",
+        "damaged_item_claims.md"
+      ],
+      "retrieved_sources_gen": [
+        "return_window.md",
+        "return_window.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.695,
+      "response_type": "policy_answer",
+      "context_relevance": 0.979,
+      "groundedness": 1.0,
+      "answer_relevance": 0.749,
+      "triad_score": 0.909,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.663,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.715,
+        "kw_overlap": 0.8
+      },
+      "answer_preview": "Customers may initiate a return request within 15 days of delivery for elig..."
+    },
+    {
+      "id": "Q02",
+      "query": "How long does a Cash on Delivery refund take to credit to my bank account?",
+      "topic": "cod_refunds",
+      "expected_sources": [
+        "cod_refund_timelines.md"
+      ],
+      "retrieved_sources_k3": [
+        "cod_refund_timelines.md",
+        "payment_failure_retry.md",
+        "cancellation_policy.md"
+      ],
+      "retrieved_sources_gen": [
+        "cod_refund_timelines.md",
+        "payment_failure_retry.md"
+      ],
+      "precision_at_3": 0.333,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.567,
+      "response_type": "policy_answer",
+      "context_relevance": 0.622,
+      "groundedness": 0.25,
+      "answer_relevance": 0.589,
+      "triad_score": 0.487,
+      "cr_audit": {
+        "source_match_ratio": 0.5,
+        "mean_similarity": 0.564,
+        "relevant_chunks": 1,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 1,
+        "total_claims": 4,
+        "unsupported": [
+          "Customers must provide their Bank Account Number and IFSC co",
+          "Once initiated, the bank reference number (UTR) is shared vi",
+          "Store credit refunds are credited instantly upon return insp"
+        ]
+      },
+      "ar_audit": {
+        "sem_sim": 0.565,
+        "kw_overlap": 0.625
+      },
+      "answer_preview": "Refunds for orders paid via Cash on Delivery (COD) are processed directly i..."
+    },
+    {
+      "id": "Q03",
+      "query": "What are the standard delivery timelines for metropolitan cities?",
+      "topic": "delivery",
+      "expected_sources": [
+        "delivery_sla.md"
+      ],
+      "retrieved_sources_k3": [
+        "delivery_sla.md",
+        "delivery_sla.md",
+        "size_exchange.md"
+      ],
+      "retrieved_sources_gen": [
+        "delivery_sla.md",
+        "delivery_sla.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.622,
+      "response_type": "policy_answer",
+      "context_relevance": 0.907,
+      "groundedness": 1.0,
+      "answer_relevance": 0.689,
+      "triad_score": 0.865,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.536,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.616,
+        "kw_overlap": 0.8
+      },
+      "answer_preview": "Standard delivery across metro cities is fulfilled within 2 to 4 business d..."
+    },
+    {
+      "id": "Q04",
+      "query": "When will the courier agent come to pick up my returned item?",
+      "topic": "reverse_pickup",
+      "expected_sources": [
+        "reverse_pickup.md"
+      ],
+      "retrieved_sources_k3": [
+        "reverse_pickup.md",
+        "damaged_item_claims.md",
+        "reverse_pickup.md"
+      ],
+      "retrieved_sources_gen": [
+        "reverse_pickup.md",
+        "damaged_item_claims.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.757,
+      "response_type": "policy_answer",
+      "context_relevance": 0.655,
+      "groundedness": 1.0,
+      "answer_relevance": 0.656,
+      "triad_score": 0.77,
+      "cr_audit": {
+        "source_match_ratio": 0.5,
+        "mean_similarity": 0.621,
+        "relevant_chunks": 1,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.76,
+        "kw_overlap": 0.5
+      },
+      "answer_preview": "Once an eligible return or exchange request is authorized, a reverse pickup..."
+    },
+    {
+      "id": "Q05",
+      "query": "Is there a manufacturer warranty on electric hair styling tools?",
+      "topic": "warranty",
+      "expected_sources": [
+        "warranty_terms.md"
+      ],
+      "retrieved_sources_k3": [
+        "warranty_terms.md",
+        "warranty_terms.md",
+        "return_window.md"
+      ],
+      "retrieved_sources_gen": [
+        "warranty_terms.md",
+        "warranty_terms.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.592,
+      "response_type": "policy_answer",
+      "context_relevance": 0.904,
+      "groundedness": 1.0,
+      "answer_relevance": 0.566,
+      "triad_score": 0.823,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.532,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 5,
+        "total_claims": 5,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.562,
+        "kw_overlap": 0.571
+      },
+      "answer_preview": "Electronic styling tools, personal grooming appliances, and tech wellness d..."
+    },
+    {
+      "id": "Q06",
+      "query": "Can I cancel my order before it gets dispatched from the warehouse?",
+      "topic": "cancellation",
+      "expected_sources": [
+        "cancellation_policy.md"
+      ],
+      "retrieved_sources_k3": [
+        "cancellation_policy.md",
+        "reverse_pickup.md",
+        "size_exchange.md"
+      ],
+      "retrieved_sources_gen": [
+        "cancellation_policy.md",
+        "reverse_pickup.md"
+      ],
+      "precision_at_3": 0.333,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.699,
+      "response_type": "policy_answer",
+      "context_relevance": 0.624,
+      "groundedness": 1.0,
+      "answer_relevance": 0.696,
+      "triad_score": 0.773,
+      "cr_audit": {
+        "source_match_ratio": 0.5,
+        "mean_similarity": 0.568,
+        "relevant_chunks": 1,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.715,
+        "kw_overlap": 0.667
+      },
+      "answer_preview": "Customers can cancel an order free of charge at any stage before the shipme..."
+    },
+    {
+      "id": "Q07",
+      "query": "How do I earn and redeem Nykaa reward points at checkout?",
+      "topic": "loyalty_points",
+      "expected_sources": [
+        "loyalty_points.md"
+      ],
+      "retrieved_sources_k3": [
+        "loyalty_points.md",
+        "temp_shipping_faq.md",
+        "loyalty_points.md"
+      ],
+      "retrieved_sources_gen": [
+        "loyalty_points.md",
+        "temp_shipping_faq.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.803,
+      "response_type": "policy_answer",
+      "context_relevance": 0.651,
+      "groundedness": 0.6,
+      "answer_relevance": 0.784,
+      "triad_score": 0.678,
+      "cr_audit": {
+        "source_match_ratio": 0.5,
+        "mean_similarity": 0.614,
+        "relevant_chunks": 1,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 3,
+        "total_claims": 5,
+        "unsupported": [
+          "Loyalty points remain valid for 12 months from the date of c",
+          "If an order is returned or refunded, the reward points credi"
+        ]
+      },
+      "ar_audit": {
+        "sem_sim": 0.751,
+        "kw_overlap": 0.833
+      },
+      "answer_preview": "Customers earn 1 Nykaa Reward Point for every 100 rupees spent on completed..."
+    },
+    {
+      "id": "Q08",
+      "query": "My bank account was debited but my order confirmation failed.",
+      "topic": "payment_failure",
+      "expected_sources": [
+        "payment_failure_retry.md"
+      ],
+      "retrieved_sources_k3": [
+        "payment_failure_retry.md",
+        "payment_failure_retry.md",
+        "cod_refund_timelines.md"
+      ],
+      "retrieved_sources_gen": [
+        "payment_failure_retry.md",
+        "payment_failure_retry.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.526,
+      "response_type": "policy_answer",
+      "context_relevance": 0.903,
+      "groundedness": 1.0,
+      "answer_relevance": 0.59,
+      "triad_score": 0.831,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.53,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.54,
+        "kw_overlap": 0.667
+      },
+      "answer_preview": "If payment debits from your bank account or digital wallet but the order co..."
+    },
+    {
+      "id": "Q09",
+      "query": "Can I exchange my footwear for a different size?",
+      "topic": "size_exchange",
+      "expected_sources": [
+        "size_exchange.md"
+      ],
+      "retrieved_sources_k3": [
+        "size_exchange.md",
+        "size_exchange.md",
+        "return_window.md"
+      ],
+      "retrieved_sources_gen": [
+        "size_exchange.md",
+        "size_exchange.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.64,
+      "response_type": "policy_answer",
+      "context_relevance": 0.925,
+      "groundedness": 1.0,
+      "answer_relevance": 0.685,
+      "triad_score": 0.87,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.568,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.642,
+        "kw_overlap": 0.75
+      },
+      "answer_preview": "Customers may request a one-time free size exchange for Apparel and Footwea..."
+    },
+    {
+      "id": "Q10",
+      "query": "I received a broken cosmetics bottle in my parcel.",
+      "topic": "damaged_items",
+      "expected_sources": [
+        "damaged_item_claims.md"
+      ],
+      "retrieved_sources_k3": [
+        "damaged_item_claims.md",
+        "size_exchange.md",
+        "reverse_pickup.md"
+      ],
+      "retrieved_sources_gen": [
+        "damaged_item_claims.md",
+        "size_exchange.md"
+      ],
+      "precision_at_3": 0.333,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.462,
+      "response_type": "policy_answer",
+      "context_relevance": 0.524,
+      "groundedness": 1.0,
+      "answer_relevance": 0.438,
+      "triad_score": 0.654,
+      "cr_audit": {
+        "source_match_ratio": 0.5,
+        "mean_similarity": 0.392,
+        "relevant_chunks": 1,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 5,
+        "total_claims": 5,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.463,
+        "kw_overlap": 0.4
+      },
+      "answer_preview": "Any report regarding an item received in a damaged, defective, broken, or t..."
+    },
+    {
+      "id": "Q11",
+      "query": "Does Nykaa ship internationally and who pays the customs duty?",
+      "topic": "international_shipping",
+      "expected_sources": [
+        "international_shipping.md"
+      ],
+      "retrieved_sources_k3": [
+        "international_shipping.md",
+        "international_shipping.md",
+        "temp_shipping_faq.md"
+      ],
+      "retrieved_sources_gen": [
+        "international_shipping.md",
+        "international_shipping.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.745,
+      "response_type": "policy_answer",
+      "context_relevance": 0.984,
+      "groundedness": 1.0,
+      "answer_relevance": 0.6,
+      "triad_score": 0.861,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.671,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.778,
+        "kw_overlap": 0.333
+      },
+      "answer_preview": "Nykaa ships select Beauty and Wellness products to over 20 international de..."
+    },
+    {
+      "id": "Q12",
+      "query": "Under what circumstances is an issue escalated to a human supervisor?",
+      "topic": "escalation",
+      "expected_sources": [
+        "escalation_matrix.md"
+      ],
+      "retrieved_sources_k3": [
+        "escalation_matrix.md",
+        "escalation_matrix.md",
+        "warranty_terms.md"
+      ],
+      "retrieved_sources_gen": [
+        "escalation_matrix.md",
+        "escalation_matrix.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.486,
+      "response_type": "policy_answer",
+      "context_relevance": 0.886,
+      "groundedness": 1.0,
+      "answer_relevance": 0.464,
+      "triad_score": 0.783,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.5,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 5,
+        "total_claims": 5,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.551,
+        "kw_overlap": 0.333
+      },
+      "answer_preview": "and direct customer requests to speak with a human agent. Escalated cases a..."
+    },
+    {
+      "id": "Q13",
+      "query": "Can I return intimate wear or lingerie?",
+      "topic": "returns_hygiene",
+      "expected_sources": [
+        "return_window.md"
+      ],
+      "retrieved_sources_k3": [
+        "return_window.md",
+        "return_window.md",
+        "size_exchange.md"
+      ],
+      "retrieved_sources_gen": [
+        "return_window.md",
+        "return_window.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.598,
+      "response_type": "policy_answer",
+      "context_relevance": 0.929,
+      "groundedness": 1.0,
+      "answer_relevance": 0.67,
+      "triad_score": 0.866,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.577,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.616,
+        "kw_overlap": 0.75
+      },
+      "answer_preview": "Customers may initiate a return request within 15 days of delivery for elig..."
+    },
+    {
+      "id": "Q14",
+      "query": "What happens if the replacement size for my footwear is out of stock?",
+      "topic": "size_exchange_stock",
+      "expected_sources": [
+        "size_exchange.md"
+      ],
+      "retrieved_sources_k3": [
+        "size_exchange.md",
+        "size_exchange.md",
+        "return_window.md"
+      ],
+      "retrieved_sources_gen": [
+        "size_exchange.md",
+        "size_exchange.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.671,
+      "response_type": "policy_answer",
+      "context_relevance": 0.981,
+      "groundedness": 1.0,
+      "answer_relevance": 0.754,
+      "triad_score": 0.912,
+      "cr_audit": {
+        "source_match_ratio": 1.0,
+        "mean_similarity": 0.667,
+        "relevant_chunks": 2,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 4,
+        "total_claims": 4,
+        "unsupported": []
+      },
+      "ar_audit": {
+        "sem_sim": 0.702,
+        "kw_overlap": 0.833
+      },
+      "answer_preview": "Customers may request a one-time free size exchange for Apparel and Footwea..."
+    },
+    {
+      "id": "Q15",
+      "query": "When can I refuse delivery at my doorstep if I changed my mind?",
+      "topic": "cancellation_doorstep",
+      "expected_sources": [
+        "cancellation_policy.md"
+      ],
+      "retrieved_sources_k3": [
+        "cancellation_policy.md",
+        "delivery_sla.md",
+        "delivery_sla.md"
+      ],
+      "retrieved_sources_gen": [
+        "cancellation_policy.md",
+        "delivery_sla.md"
+      ],
+      "precision_at_3": 0.333,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "confidence": 0.439,
+      "response_type": "policy_answer",
+      "context_relevance": 0.534,
+      "groundedness": 0.4,
+      "answer_relevance": 0.525,
+      "triad_score": 0.486,
+      "cr_audit": {
+        "source_match_ratio": 0.5,
+        "mean_similarity": 0.409,
+        "relevant_chunks": 1,
+        "total_chunks": 2
+      },
+      "g_audit": {
+        "supported_claims": 2,
+        "total_claims": 5,
+        "unsupported": [
+          "For cancelled prepaid orders paid via Standard delivery acro",
+          "Non-metro locations, tier-2, and tier-3 regions typically re",
+          "Express next-day delivery is available for select pin codes "
+        ]
+      },
+      "ar_audit": {
+        "sem_sim": 0.476,
+        "kw_overlap": 0.6
+      },
+      "answer_preview": "Customers can cancel an order free of charge at any stage before the shipme..."
+    }
+  ]
+}
