@@ -1,0 +1,3 @@
+# International Shipping Policy
+
+Nykaa ships select Beauty and Wellness products to over 20 international destinations through premier global courier partners. International orders typically reach destination addresses within 7 to 14 business days, subject to local customs clearance procedures and regional aviation schedules. All applicable customs duties, import tariffs, and local taxes are determined by the destination country's regulations and must be paid by the recipient upon delivery. Due to cross-border transit constraints and customs regulations, international orders are strictly non-returnable, non-exchangeable, and ineligible for Cash on Delivery.
