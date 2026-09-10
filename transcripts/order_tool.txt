@@ -1,0 +1,51 @@
+$ .venv\Scripts\python.exe agent/tools.py
+================================================================================
+           NYKAA ASSIST TASK 6 — ORDER STATUS TOOL VERIFICATION                 
+================================================================================
+Dataset path         : D:\chole-bhaature\orders.json
+Escalation Formula   : 0.6 * delayed_flag + 0.4 * (days / 30)
+80th Percentile Mark : 0.68
+--------------------------------------------------------------------------------
+
+Lookup: 'NYK-00001'
+  Record ID        : NYK-00001
+  Status           : PLACED
+  Order Value (INR): 2301.65
+  Escalation Score : 0.693
+  Triage Flagged   : YES (High Priority)
+
+Lookup: 'NYK-00002'
+  Record ID        : NYK-00002
+  Status           : DELIVERED
+  Order Value (INR): 2998.61
+  Escalation Score : 0.24
+  Triage Flagged   : NO (Normal)
+
+Lookup: 'NYK-00003'
+  Record ID        : NYK-00003
+  Status           : SHIPPED
+  Order Value (INR): 2822.56
+  Escalation Score : 0.0
+  Triage Flagged   : NO (Normal)
+
+Lookup: 'NYK-00006'
+  Record ID        : NYK-00006
+  Status           : SHIPPED
+  Order Value (INR): 9397.44
+  Escalation Score : 0.64
+  Triage Flagged   : NO (Normal)
+
+Lookup: 'NYK-00007'
+  Record ID        : NYK-00007
+  Status           : RETURNED
+  Order Value (INR): 3255.39
+  Escalation Score : 0.933
+  Triage Flagged   : YES (High Priority)
+
+Lookup: 'NYK-99999'
+  Record ID        : NYK-99999
+  Status           : NOT FOUND
+  Order Value (INR): None
+  Escalation Score : None
+
+================================================================================
