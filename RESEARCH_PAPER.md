@@ -442,4 +442,4 @@ The following foundational academic literature and technical specifications subs
 - [Product Requirements Document (`docs/PRD.md`)](./PRD.md)
 - [Technical Requirements Document (`docs/TRD.md`)](./TRD.md)
 - [AI Architecture Specification (`docs/AI_ARCHITECTURE.md`)](./AI_ARCHITECTURE.md)
-- [Root Evaluator README (`README.md`)](../README.md)
+- [Root Evaluator README (`README.md`)](README.md)
