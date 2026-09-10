@@ -1,0 +1,25 @@
+# Orchestration & Graph
+langgraph>=0.2.0
+langgraph-checkpoint-sqlite>=2.0.0
+langchain-core>=0.3.0
+
+# Embeddings & Vector Store
+sentence-transformers>=3.0.0
+chromadb>=0.5.0
+
+# API & Data Validation
+fastapi>=0.115.0
+uvicorn>=0.30.0
+pydantic>=2.8.0
+jsonschema>=4.23.0
+
+# MCP (Model Context Protocol)
+fastmcp>=0.1.0
+
+# UI & Frontend
+streamlit>=1.35.0
+
+# Utilities & Config
+python-dotenv>=1.0.1
+requests>=2.32.0
+
