@@ -1,0 +1,613 @@
+{
+  "metadata": {
+    "benchmark_name": "Task 24 Context Compression Evaluation",
+    "collection": "nykaa_kb_fixed",
+    "embedding_model": "all-MiniLM-L6-v2",
+    "total_in_scope_queries": 15,
+    "total_out_of_scope_queries": 5,
+    "total_adversarial_queries": 5
+  },
+  "summary_metrics": {
+    "precision_at_3": 0.6,
+    "recall_at_3": 1.0,
+    "top_1_accuracy": 1.0,
+    "stage_a": {
+      "context_relevance": 0.837,
+      "groundedness": 1.0,
+      "answer_relevance": 0.63,
+      "overall_triad": 0.822,
+      "fallback_recall": 0.9,
+      "false_fallback_rate": 0.0
+    },
+    "stage_b": {
+      "context_relevance": 0.837,
+      "groundedness": 1.0,
+      "answer_relevance": 0.633,
+      "overall_triad": 0.823,
+      "fallback_recall": 0.9,
+      "false_fallback_rate": 0.0
+    },
+    "compression_efficiency": {
+      "original_context_chars": 9357,
+      "compressed_context_chars": 8322,
+      "char_compression_ratio": 0.1106,
+      "char_reduction_percent": 11.06,
+      "original_context_words": 1394,
+      "compressed_context_words": 1239,
+      "word_compression_ratio": 0.1112,
+      "word_reduction_percent": 11.12
+    }
+  },
+  "query_breakdown": [
+    {
+      "id": "Q01",
+      "query": "Can I return cosmetic products or opened perfumes?",
+      "topic": "returns",
+      "expected_sources": [
+        "return_window.md"
+      ],
+      "retrieved_sources_k3": [
+        "return_window.md",
+        "return_window.md",
+        "size_exchange.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Customers may initiate a return request within 15 days of delivery for eligible Beauty, Apparel, and Footwear items. Unopened cosmetic products, skincare essentials, and unworn clothing with original tags and packaging intact qualify for a full return. For hygiene and safety reasons, intimate wear, innerwear, opened fragrances, and customized personal safety reasons, intimate wear, innerwear, opened fragrances, and customized personal care items are strictly non-returnable. Electronics and home lifestyle products carry a 7-day return window from the date of confirmed delivery.",
+        "context_relevance": 0.979,
+        "groundedness": 1.0,
+        "answer_relevance": 0.749,
+        "triad_score": 0.909
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Customers may initiate a return request within 15 days of delivery for eligible Beauty, Apparel, and Footwear items. Unopened cosmetic products, skincare essentials, and unworn clothing with original tags and packaging intact qualify for a full return. For hygiene and safety reasons, intimate wear, innerwear, opened fragrances, and customized personal safety reasons, intimate wear, innerwear, opened fragrances, and customized personal care items are strictly non-returnable.",
+        "context_relevance": 0.979,
+        "groundedness": 1.0,
+        "answer_relevance": 0.755,
+        "triad_score": 0.911,
+        "compression_applied": true,
+        "original_chars": 582,
+        "compressed_chars": 477,
+        "original_words": 81,
+        "compressed_words": 65,
+        "compression_ratio": 0.1804
+      }
+    },
+    {
+      "id": "Q02",
+      "query": "How long does a Cash on Delivery refund take to credit to my bank account?",
+      "topic": "cod_refunds",
+      "expected_sources": [
+        "cod_refund_timelines.md"
+      ],
+      "retrieved_sources_k3": [
+        "cod_refund_timelines.md",
+        "cod_refund_timelines.md",
+        "payment_failure_retry.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Refunds for orders paid via Cash on Delivery (COD) are processed directly into the customer's verified bank account or credited as Nykaa store credits within 5 to 7 business days following quality verification at our fulfillment center. Customers must provide their Bank Account Number and IFSC code through the support their Bank Account Number and IFSC code through the support portal or checkout returns interface to receive direct bank transfers. Once initiated, the bank reference number (UTR) is shared via SMS and registered email for tracking. Store credit refunds are credited instantly upon return inspection approval and never expire.",
+        "context_relevance": 0.865,
+        "groundedness": 1.0,
+        "answer_relevance": 0.589,
+        "triad_score": 0.818
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Refunds for orders paid via Cash on Delivery (COD) are processed directly into the customer's verified bank account or credited as Nykaa store credits within 5 to 7 business days following quality verification at our fulfillment center. Customers must provide their Bank Account Number and IFSC code through the support their Bank Account Number and IFSC code through the support portal or checkout returns interface to receive direct bank transfers. Once initiated, the bank reference number (UTR) is shared via SMS and registered email for tracking. Store credit refunds are credited instantly upon return inspection approval and never expire.",
+        "context_relevance": 0.865,
+        "groundedness": 1.0,
+        "answer_relevance": 0.589,
+        "triad_score": 0.818,
+        "compression_applied": false,
+        "original_chars": 644,
+        "compressed_chars": 644,
+        "original_words": 99,
+        "compressed_words": 99,
+        "compression_ratio": 0.0
+      }
+    },
+    {
+      "id": "Q03",
+      "query": "What are the standard delivery timelines for metropolitan cities?",
+      "topic": "delivery",
+      "expected_sources": [
+        "delivery_sla.md"
+      ],
+      "retrieved_sources_k3": [
+        "delivery_sla.md",
+        "delivery_sla.md",
+        "size_exchange.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Standard delivery across metro cities is fulfilled within 2 to 4 business days from the order placement date. Non-metro locations, tier-2, and tier-3 regions typically require 4 to 7 business days depending on courier accessibility and regional logistics. Express next-day delivery is available for select pin codes in Tier-1 metropolitan delivery is available for select pin codes in Tier-1 metropolitan areas on orders placed before 2:00 PM IST. Any shipment experiencing dispatch delays exceeding 48 hours is automatically flagged in the logistics tracking system with an updated delivery estimate.",
+        "context_relevance": 0.907,
+        "groundedness": 1.0,
+        "answer_relevance": 0.689,
+        "triad_score": 0.865
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Standard delivery across metro cities is fulfilled within 2 to 4 business days from the order placement date. Non-metro locations, tier-2, and tier-3 regions typically require 4 to 7 business days depending on courier accessibility and regional logistics. Express next-day delivery is available for select pin codes in Tier-1 metropolitan delivery is available for select pin codes in Tier-1 metropolitan areas on orders placed before 2:00 PM IST. Any shipment experiencing dispatch delays exceeding 48 hours is automatically flagged in the logistics tracking system with an updated delivery estimate.",
+        "context_relevance": 0.907,
+        "groundedness": 1.0,
+        "answer_relevance": 0.689,
+        "triad_score": 0.865,
+        "compression_applied": false,
+        "original_chars": 600,
+        "compressed_chars": 600,
+        "original_words": 89,
+        "compressed_words": 89,
+        "compression_ratio": 0.0
+      }
+    },
+    {
+      "id": "Q04",
+      "query": "When will the courier agent come to pick up my returned item?",
+      "topic": "reverse_pickup",
+      "expected_sources": [
+        "reverse_pickup.md"
+      ],
+      "retrieved_sources_k3": [
+        "reverse_pickup.md",
+        "damaged_item_claims.md",
+        "reverse_pickup.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Once an eligible return or exchange request is authorized, a reverse pickup courier agent will be dispatched to the delivery address within 24 to 48 business hours. Customers must securely hand over the item in its original brand box, complete with all price tags, manuals, protective packaging, and free promotional Any report regarding an item received in a damaged, defective, broken, or tampered condition must be submitted within 48 hours of confirmed delivery. Customers must provide clear photographs of the outer shipping box, the damaged product, and the batch code or barcode label attached to the product packaging. Upon rapid",
+        "context_relevance": 0.655,
+        "groundedness": 1.0,
+        "answer_relevance": 0.656,
+        "triad_score": 0.77
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Once an eligible return or exchange request is authorized, a reverse pickup courier agent will be dispatched to the delivery address within 24 to 48 business hours. Customers must securely hand over the item in its original brand box, complete with all price tags, manuals, protective packaging, and free promotional Any report regarding an item received in a damaged, defective, broken, or tampered condition must be submitted within 48 hours of confirmed delivery. Customers must provide clear photographs of the outer shipping box, the damaged product, and the batch code or barcode label attached to the product packaging.",
+        "context_relevance": 0.655,
+        "groundedness": 1.0,
+        "answer_relevance": 0.657,
+        "triad_score": 0.771,
+        "compression_applied": true,
+        "original_chars": 636,
+        "compressed_chars": 625,
+        "original_words": 100,
+        "compressed_words": 98,
+        "compression_ratio": 0.0173
+      }
+    },
+    {
+      "id": "Q05",
+      "query": "Is there a manufacturer warranty on electric hair styling tools?",
+      "topic": "warranty",
+      "expected_sources": [
+        "warranty_terms.md"
+      ],
+      "retrieved_sources_k3": [
+        "warranty_terms.md",
+        "warranty_terms.md",
+        "return_window.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Electronic styling tools, personal grooming appliances, and tech wellness devices purchased on Nykaa carry a standard 1-year to 2-year manufacturer warranty against manufacturing defects. The official manufacturer warranty card, intact serial number, and original Nykaa invoice serve as valid proof of purchase for warranty claims. Damage resulting from accidental drops, of purchase for warranty claims. Damage resulting from accidental drops, liquid contact, physical tampering, unauthorized repairs, or normal daily cosmetic wear and tear is not covered under warranty. Warranty fulfillment and servicing are executed through authorized brand service centers.",
+        "context_relevance": 0.904,
+        "groundedness": 1.0,
+        "answer_relevance": 0.566,
+        "triad_score": 0.823
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Electronic styling tools, personal grooming appliances, and tech wellness devices purchased on Nykaa carry a standard 1-year to 2-year manufacturer warranty against manufacturing defects. The official manufacturer warranty card, intact serial number, and original Nykaa invoice serve as valid proof of purchase for warranty claims. of purchase for warranty claims. Damage resulting from accidental drops, liquid contact, physical tampering, unauthorized repairs, or normal daily cosmetic wear and tear is not covered under warranty. Warranty fulfillment and servicing are executed through authorized brand service centers.",
+        "context_relevance": 0.904,
+        "groundedness": 1.0,
+        "answer_relevance": 0.578,
+        "triad_score": 0.827,
+        "compression_applied": true,
+        "original_chars": 661,
+        "compressed_chars": 621,
+        "original_words": 89,
+        "compressed_words": 84,
+        "compression_ratio": 0.0605
+      }
+    },
+    {
+      "id": "Q06",
+      "query": "Can I cancel my order before it gets dispatched from the warehouse?",
+      "topic": "cancellation",
+      "expected_sources": [
+        "cancellation_policy.md"
+      ],
+      "retrieved_sources_k3": [
+        "cancellation_policy.md",
+        "reverse_pickup.md",
+        "payment_failure_retry.md"
+      ],
+      "precision_at_3": 0.333,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Customers can cancel an order free of charge at any stage before the shipment has been dispatched from our fulfillment center. Once an order status transitions to Shipped or In-Transit, direct digital cancellation is disabled, and the customer should refuse delivery at the doorstep. For cancelled prepaid orders paid via Once an eligible return or exchange request is authorized, a reverse pickup courier agent will be dispatched to the delivery address within 24 to 48 business hours. Customers must securely hand over the item in its original brand box, complete with all price tags, manuals, protective packaging, and free promotional",
+        "context_relevance": 0.624,
+        "groundedness": 1.0,
+        "answer_relevance": 0.696,
+        "triad_score": 0.773
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Customers can cancel an order free of charge at any stage before the shipment has been dispatched from our fulfillment center. Once an order status transitions to Shipped or In-Transit, direct digital cancellation is disabled, and the customer should refuse delivery at the doorstep. For cancelled prepaid orders paid via Once an eligible return or exchange request is authorized, a reverse pickup courier agent will be dispatched to the delivery address within 24 to 48 business hours. Customers must securely hand over the item in its original brand box, complete with all price tags, manuals, protective packaging, and free promotional",
+        "context_relevance": 0.624,
+        "groundedness": 1.0,
+        "answer_relevance": 0.696,
+        "triad_score": 0.773,
+        "compression_applied": false,
+        "original_chars": 637,
+        "compressed_chars": 637,
+        "original_words": 100,
+        "compressed_words": 100,
+        "compression_ratio": 0.0
+      }
+    },
+    {
+      "id": "Q07",
+      "query": "How do I earn and redeem Nykaa reward points at checkout?",
+      "topic": "loyalty_points",
+      "expected_sources": [
+        "loyalty_points.md"
+      ],
+      "retrieved_sources_k3": [
+        "loyalty_points.md",
+        "loyalty_points.md",
+        "cod_refund_timelines.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Customers earn 1 Nykaa Reward Point for every 100 rupees spent on completed and delivered orders across all product categories. Accumulated reward points can be redeemed during checkout, where each point offers a direct discount of 1 rupee on eligible catalog purchases. Loyalty points remain valid for 12 months from catalog purchases. Loyalty points remain valid for 12 months from the date of credit and automatically lapse if unutilized. If an order is returned or refunded, the reward points credited for that transaction are debited from the customer's loyalty balance.",
+        "context_relevance": 0.949,
+        "groundedness": 1.0,
+        "answer_relevance": 0.784,
+        "triad_score": 0.911
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Customers earn 1 Nykaa Reward Point for every 100 rupees spent on completed and delivered orders across all product categories. Accumulated reward points can be redeemed during checkout, where each point offers a direct discount of 1 rupee on eligible catalog purchases. Loyalty points remain valid for 12 months from Loyalty points remain valid for 12 months from the date of credit and automatically lapse if unutilized. If an order is returned or refunded, the reward points credited for that transaction are debited from the customer's loyalty balance.",
+        "context_relevance": 0.949,
+        "groundedness": 1.0,
+        "answer_relevance": 0.791,
+        "triad_score": 0.913,
+        "compression_applied": true,
+        "original_chars": 574,
+        "compressed_chars": 555,
+        "original_words": 90,
+        "compressed_words": 88,
+        "compression_ratio": 0.0331
+      }
+    },
+    {
+      "id": "Q08",
+      "query": "My bank account was debited but my order confirmation failed.",
+      "topic": "payment_failure",
+      "expected_sources": [
+        "payment_failure_retry.md"
+      ],
+      "retrieved_sources_k3": [
+        "payment_failure_retry.md",
+        "payment_failure_retry.md",
+        "cod_refund_timelines.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "If payment debits from your bank account or digital wallet but the order confirmation fails to generate, the payment gateway initiates an automated reversal within 24 to 48 hours. Depending on the issuing bank, funds typically credit back to the source account within 3 to 5 banking days without requiring source account within 3 to 5 banking days without requiring manual intervention. Customers may retry placing the order using an alternate payment method such as UPI, saved cards, or Cash on Delivery while the reversal settles. If the deducted amount is not restored within 7 business days, the customer should",
+        "context_relevance": 0.903,
+        "groundedness": 1.0,
+        "answer_relevance": 0.59,
+        "triad_score": 0.831
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "If payment debits from your bank account or digital wallet but the order confirmation fails to generate, the payment gateway initiates an automated reversal within 24 to 48 hours. Depending on the issuing bank, funds typically credit back to the source account within 3 to 5 banking days without requiring source account within 3 to 5 banking days without requiring manual intervention.",
+        "context_relevance": 0.903,
+        "groundedness": 1.0,
+        "answer_relevance": 0.571,
+        "triad_score": 0.825,
+        "compression_applied": true,
+        "original_chars": 614,
+        "compressed_chars": 385,
+        "original_words": 100,
+        "compressed_words": 62,
+        "compression_ratio": 0.373
+      }
+    },
+    {
+      "id": "Q09",
+      "query": "Can I exchange my footwear for a different size?",
+      "topic": "size_exchange",
+      "expected_sources": [
+        "size_exchange.md"
+      ],
+      "retrieved_sources_k3": [
+        "size_exchange.md",
+        "size_exchange.md",
+        "return_window.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Customers may request a one-time free size exchange for Apparel and Footwear products within 7 days of package delivery. Size exchange requests are subject to replacement inventory availability in the requested variant size at the designated warehouse. If the desired replacement size is out of stock, a standard return is replacement size is out of stock, a standard return is processed, and the full order value is refunded to the original payment method. Exchanged items must remain unused, unwashed, odor-free, and returned with all original tags and shoe boxes intact.",
+        "context_relevance": 0.925,
+        "groundedness": 1.0,
+        "answer_relevance": 0.685,
+        "triad_score": 0.87
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Customers may request a one-time free size exchange for Apparel and Footwear products within 7 days of package delivery. Size exchange requests are subject to replacement inventory availability in the requested variant size at the designated warehouse. If the desired replacement size is out of stock, a standard return is replacement size is out of stock, a standard return is processed, and the full order value is refunded to the original payment method. Exchanged items must remain unused, unwashed, odor-free, and returned with all original tags and shoe boxes intact.",
+        "context_relevance": 0.925,
+        "groundedness": 1.0,
+        "answer_relevance": 0.685,
+        "triad_score": 0.87,
+        "compression_applied": false,
+        "original_chars": 572,
+        "compressed_chars": 572,
+        "original_words": 90,
+        "compressed_words": 90,
+        "compression_ratio": 0.0
+      }
+    },
+    {
+      "id": "Q10",
+      "query": "I received a broken cosmetics bottle in my parcel.",
+      "topic": "damaged_items",
+      "expected_sources": [
+        "damaged_item_claims.md"
+      ],
+      "retrieved_sources_k3": [
+        "damaged_item_claims.md",
+        "size_exchange.md",
+        "return_window.md"
+      ],
+      "precision_at_3": 0.333,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Any report regarding an item received in a damaged, defective, broken, or tampered condition must be submitted within 48 hours of confirmed delivery. Customers must provide clear photographs of the outer shipping box, the damaged product, and the batch code or barcode label attached to the product packaging. Upon rapid Customers may request a one-time free size exchange for Apparel and Footwear products within 7 days of package delivery. Size exchange requests are subject to replacement inventory availability in the requested variant size at the designated warehouse. If the desired replacement size is out of stock, a standard return is",
+        "context_relevance": 0.524,
+        "groundedness": 1.0,
+        "answer_relevance": 0.438,
+        "triad_score": 0.654
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Any report regarding an item received in a damaged, defective, broken, or tampered condition must be submitted within 48 hours of confirmed delivery. Customers must provide clear photographs of the outer shipping box, the damaged product, and the batch code or barcode label attached to the product packaging. Customers may request a one-time free size exchange for Apparel and Footwear products within 7 days of package delivery. Size exchange requests are subject to replacement inventory availability in the requested variant size at the designated warehouse. If the desired replacement size is out of stock, a standard return is",
+        "context_relevance": 0.524,
+        "groundedness": 1.0,
+        "answer_relevance": 0.44,
+        "triad_score": 0.655,
+        "compression_applied": true,
+        "original_chars": 642,
+        "compressed_chars": 631,
+        "original_words": 100,
+        "compressed_words": 98,
+        "compression_ratio": 0.0171
+      }
+    },
+    {
+      "id": "Q11",
+      "query": "Does Nykaa ship internationally and who pays the customs duty?",
+      "topic": "international_shipping",
+      "expected_sources": [
+        "international_shipping.md"
+      ],
+      "retrieved_sources_k3": [
+        "international_shipping.md",
+        "international_shipping.md",
+        "temp_shipping_faq.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Nykaa ships select Beauty and Wellness products to over 20 international destinations through premier global courier partners. International orders typically reach destination addresses within 7 to 14 business days, subject to local customs clearance procedures and regional aviation schedules. All applicable customs duties, import tariffs, and local taxes are determined applicable customs duties, import tariffs, and local taxes are determined by the destination country's regulations and must be paid by the recipient upon delivery. Due to cross-border transit constraints and customs regulations, international orders are strictly non-returnable, non-exchangeable, and ineligible for Cash on Delivery.",
+        "context_relevance": 0.984,
+        "groundedness": 1.0,
+        "answer_relevance": 0.6,
+        "triad_score": 0.861
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Nykaa ships select Beauty and Wellness products to over 20 international destinations through premier global courier partners. International orders typically reach destination addresses within 7 to 14 business days, subject to local customs clearance procedures and regional aviation schedules. All applicable customs duties, import tariffs, and local taxes are determined applicable customs duties, import tariffs, and local taxes are determined by the destination country's regulations and must be paid by the recipient upon delivery. Due to cross-border transit constraints and customs regulations, international orders are strictly non-returnable, non-exchangeable, and ineligible for Cash on Delivery.",
+        "context_relevance": 0.984,
+        "groundedness": 1.0,
+        "answer_relevance": 0.6,
+        "triad_score": 0.861,
+        "compression_applied": false,
+        "original_chars": 705,
+        "compressed_chars": 705,
+        "original_words": 94,
+        "compressed_words": 94,
+        "compression_ratio": 0.0
+      }
+    },
+    {
+      "id": "Q12",
+      "query": "Under what circumstances is an issue escalated to a human supervisor?",
+      "topic": "escalation",
+      "expected_sources": [
+        "escalation_matrix.md"
+      ],
+      "retrieved_sources_k3": [
+        "escalation_matrix.md",
+        "escalation_matrix.md",
+        "warranty_terms.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "and direct customer requests to speak with a human agent. Escalated cases are assigned a high-priority incident ticket and receive specialized agent outreach within 2 hours. Routine inquiries regarding standard tracking, return policies, and product details remain handled by automated support. The escalation matrix establishes mandatory overrides where conversations immediately transfer to a senior human support specialist regardless of automated scores. Hard escalation triggers include explicit allegations of financial fraud, repeated failed payment disputes exceeding 7 days, verified counterfeit product claims, and direct customer requests to speak with a human agent.",
+        "context_relevance": 0.886,
+        "groundedness": 1.0,
+        "answer_relevance": 0.464,
+        "triad_score": 0.783
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "and direct customer requests to speak with a human agent. Escalated cases are assigned a high-priority incident ticket and receive specialized agent outreach within 2 hours. The escalation matrix establishes mandatory overrides where conversations immediately transfer to a senior human support specialist regardless of automated scores. Hard escalation triggers include explicit allegations of financial fraud, repeated failed payment disputes exceeding 7 days, verified counterfeit product claims, and direct customer requests to speak with a human agent.",
+        "context_relevance": 0.886,
+        "groundedness": 1.0,
+        "answer_relevance": 0.467,
+        "triad_score": 0.784,
+        "compression_applied": true,
+        "original_chars": 677,
+        "compressed_chars": 556,
+        "original_words": 91,
+        "compressed_words": 76,
+        "compression_ratio": 0.1787
+      }
+    },
+    {
+      "id": "Q13",
+      "query": "Can I return intimate wear or lingerie?",
+      "topic": "returns_hygiene",
+      "expected_sources": [
+        "return_window.md"
+      ],
+      "retrieved_sources_k3": [
+        "return_window.md",
+        "return_window.md",
+        "size_exchange.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Customers may initiate a return request within 15 days of delivery for eligible Beauty, Apparel, and Footwear items. Unopened cosmetic products, skincare essentials, and unworn clothing with original tags and packaging intact qualify for a full return. For hygiene and safety reasons, intimate wear, innerwear, opened fragrances, and customized personal safety reasons, intimate wear, innerwear, opened fragrances, and customized personal care items are strictly non-returnable. Electronics and home lifestyle products carry a 7-day return window from the date of confirmed delivery.",
+        "context_relevance": 0.929,
+        "groundedness": 1.0,
+        "answer_relevance": 0.67,
+        "triad_score": 0.866
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Customers may initiate a return request within 15 days of delivery for eligible Beauty, Apparel, and Footwear items. Unopened cosmetic products, skincare essentials, and unworn clothing with original tags and packaging intact qualify for a full return. For hygiene and safety reasons, intimate wear, innerwear, opened fragrances, and customized personal safety reasons, intimate wear, innerwear, opened fragrances, and customized personal care items are strictly non-returnable.",
+        "context_relevance": 0.929,
+        "groundedness": 1.0,
+        "answer_relevance": 0.69,
+        "triad_score": 0.873,
+        "compression_applied": true,
+        "original_chars": 582,
+        "compressed_chars": 477,
+        "original_words": 81,
+        "compressed_words": 65,
+        "compression_ratio": 0.1804
+      }
+    },
+    {
+      "id": "Q14",
+      "query": "What happens if the replacement size for my footwear is out of stock?",
+      "topic": "size_exchange_stock",
+      "expected_sources": [
+        "size_exchange.md"
+      ],
+      "retrieved_sources_k3": [
+        "size_exchange.md",
+        "size_exchange.md",
+        "return_window.md"
+      ],
+      "precision_at_3": 0.667,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Customers may request a one-time free size exchange for Apparel and Footwear products within 7 days of package delivery. Size exchange requests are subject to replacement inventory availability in the requested variant size at the designated warehouse. If the desired replacement size is out of stock, a standard return is replacement size is out of stock, a standard return is processed, and the full order value is refunded to the original payment method. Exchanged items must remain unused, unwashed, odor-free, and returned with all original tags and shoe boxes intact.",
+        "context_relevance": 0.981,
+        "groundedness": 1.0,
+        "answer_relevance": 0.754,
+        "triad_score": 0.912
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Customers may request a one-time free size exchange for Apparel and Footwear products within 7 days of package delivery. Size exchange requests are subject to replacement inventory availability in the requested variant size at the designated warehouse. If the desired replacement size is out of stock, a standard return is replacement size is out of stock, a standard return is processed, and the full order value is refunded to the original payment method. Exchanged items must remain unused, unwashed, odor-free, and returned with all original tags and shoe boxes intact.",
+        "context_relevance": 0.981,
+        "groundedness": 1.0,
+        "answer_relevance": 0.754,
+        "triad_score": 0.912,
+        "compression_applied": false,
+        "original_chars": 572,
+        "compressed_chars": 572,
+        "original_words": 90,
+        "compressed_words": 90,
+        "compression_ratio": 0.0
+      }
+    },
+    {
+      "id": "Q15",
+      "query": "When can I refuse delivery at my doorstep if I changed my mind?",
+      "topic": "cancellation_doorstep",
+      "expected_sources": [
+        "cancellation_policy.md"
+      ],
+      "retrieved_sources_k3": [
+        "cancellation_policy.md",
+        "delivery_sla.md",
+        "delivery_sla.md"
+      ],
+      "precision_at_3": 0.333,
+      "recall_at_3": 1.0,
+      "hit_top_1": true,
+      "stage_a": {
+        "response_type": "policy_answer",
+        "answer": "Customers can cancel an order free of charge at any stage before the shipment has been dispatched from our fulfillment center. Once an order status transitions to Shipped or In-Transit, direct digital cancellation is disabled, and the customer should refuse delivery at the doorstep. For cancelled prepaid orders paid via Standard delivery across metro cities is fulfilled within 2 to 4 business days from the order placement date. Non-metro locations, tier-2, and tier-3 regions typically require 4 to 7 business days depending on courier accessibility and regional logistics. Express next-day delivery is available for select pin codes in Tier-1 metropolitan",
+        "context_relevance": 0.543,
+        "groundedness": 1.0,
+        "answer_relevance": 0.525,
+        "triad_score": 0.689
+      },
+      "stage_b": {
+        "response_type": "policy_answer",
+        "answer": "Once an order status transitions to Shipped or In-Transit, direct digital cancellation is disabled, and the customer should refuse delivery at the doorstep. Standard delivery across metro cities is fulfilled within 2 to 4 business days from the order placement date.",
+        "context_relevance": 0.543,
+        "groundedness": 1.0,
+        "answer_relevance": 0.537,
+        "triad_score": 0.693,
+        "compression_applied": true,
+        "original_chars": 659,
+        "compressed_chars": 265,
+        "original_words": 100,
+        "compressed_words": 41,
+        "compression_ratio": 0.5979
+      }
+    }
+  ]
+}
