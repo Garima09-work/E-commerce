@@ -1,0 +1,41 @@
+$ .venv\Scripts\python.exe rag/evaluate_retrieval.py
+================================================================================
+           NYKAA ASSIST TASK 5 — RETRIEVAL EVALUATION REPORT                    
+================================================================================
+Evaluating 15 queries against both ChromaDB collections with top_k = 3
+Embedding model: all-MiniLM-L6-v2 | Distance metric: Cosine Similarity
+--------------------------------------------------------------------------------
+
+--- Per-Query Breakdown ---
+ID   | Expected Source            | Fixed P@3  | Fixed R@3  | Sent P@3   | Sent R@3  
+-------------------------------------------------------------------------------------
+Q01  | return_window.md           | 0.667      | 1.000      | 0.667      | 1.000     
+Q02  | cod_refund_timelines.md    | 0.333      | 1.000      | 0.333      | 1.000     
+Q03  | delivery_sla.md            | 0.667      | 1.000      | 0.667      | 1.000     
+Q04  | reverse_pickup.md          | 0.667      | 1.000      | 0.667      | 1.000     
+Q05  | warranty_terms.md          | 0.667      | 1.000      | 0.667      | 1.000     
+Q06  | cancellation_policy.md     | 0.667      | 1.000      | 0.333      | 1.000     
+Q07  | loyalty_points.md          | 0.333      | 1.000      | 0.333      | 1.000     
+Q08  | payment_failure_retry.md   | 0.667      | 1.000      | 0.667      | 1.000     
+Q09  | size_exchange.md           | 0.667      | 1.000      | 0.667      | 1.000     
+Q10  | damaged_item_claims.md     | 0.667      | 1.000      | 0.333      | 1.000     
+Q11  | international_shipping.md  | 0.667      | 1.000      | 0.667      | 1.000     
+Q12  | escalation_matrix.md       | 0.667      | 1.000      | 0.667      | 1.000     
+Q13  | return_window.md           | 0.667      | 1.000      | 0.667      | 1.000     
+Q14  | size_exchange.md           | 0.667      | 1.000      | 0.667      | 1.000     
+Q15  | cancellation_policy.md     | 0.333      | 1.000      | 0.333      | 1.000     
+
+--------------------------------------------------------------------------------
+                    AGGREGATE PERFORMANCE COMPARISON                            
+--------------------------------------------------------------------------------
+Metric                    | nykaa_kb_fixed     | nykaa_kb_sentence 
+-------------------------------------------------------------------
+Mean Precision@3          | 0.600              | 0.556             
+Mean Recall@3             | 1.000              | 1.000             
+Top-1 Retrieval Accuracy  | 0.800              | 0.933             
+--------------------------------------------------------------------------------
+
+--- Numbers-Cited Collection Recommendation ---
+Recommended Collection : nykaa_kb_fixed
+Justification          : nykaa_kb_fixed achieves higher Mean Precision@3 (0.600 vs 0.556, a +0.044 advantage) while maintaining identical 100% Mean Recall@3 (1.000). The 50-word window with 10-word overlap provides more consistent token density and relevant chunk retrieval.
+================================================================================
