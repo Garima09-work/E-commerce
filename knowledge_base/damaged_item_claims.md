@@ -1,0 +1,3 @@
+# Damaged and Defective Item Claims Policy
+
+Any report regarding an item received in a damaged, defective, broken, or tampered condition must be submitted within 48 hours of confirmed delivery. Customers must provide clear photographs of the outer shipping box, the damaged product, and the batch code or barcode label attached to the product packaging. Upon rapid assessment by the customer resolution team, an immediate replacement shipment or full refund will be processed without mandatory reverse collection for severely damaged cosmetic products. Failure to report transit damages within 48 hours will disqualify the claim from automatic resolution.
