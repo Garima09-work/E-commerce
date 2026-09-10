@@ -1,0 +1,93 @@
+================================================================================
+          NYKAA ASSIST TASK 25 — ANSWER VERIFICATION AGENT EXECUTION TRANSCRIPT
+================================================================================
+Timestamp: 2026-09-07T12:18:00Z
+Task: Task 25 — Answer Verification Agent
+Repository: d:/chole-bhaature
+Python: python (3.13)
+
+================================================================================
+1. TASK 25 UNIT & INTEGRATION TEST SUITE (agent/answer_verification_tests.py)
+================================================================================
+Command: python -u agent/answer_verification_tests.py
+
+================================================================================
+       NYKAA ASSIST TASK 25 — ANSWER VERIFICATION AGENT TEST SUITE              
+================================================================================
+[PASS] T25-1: Correct policy answer -> PASS
+[PASS] T25-2: Correct operational answer -> PASS
+[PASS] T25-3: Mixed policy + operational -> PASS
+[PASS] T25-4: Unsupported policy claim -> REVISE/REJECT
+[PASS] T25-5: Contradicted policy claim -> REJECT
+[PASS] T25-6: Incorrect numerical value -> REVISE
+[PASS] T25-7: Incorrect temporal constraint -> REVISE/REJECT
+[PASS] T25-8: Missing evidence -> REJECT
+[PASS] T25-9: Tool result contradiction -> REJECT
+[PASS] T25-10: Repair produces grounded answer -> PASS
+[PASS] T25-11: Repair still unsupported -> REJECT
+[PASS] T25-12: Max verification attempts enforced
+[PASS] T25-13: Prompt injection in evidence passive
+[PASS] T25-14: Prompt injection in tool passive
+[PASS] T25-15: PII scrubbed from verification logs
+[PASS] T25-16: LangGraph state & checkpointing verified
+[PASS] T25-17: Knowledge Gate behavior preserved
+[PASS] T25-18: Context compression behavior preserved
+[PASS] T25-19: MCP tool routing preserved
+[PASS] T25-20: Resilience & timeout preserved
+================================================================================
+       RESULT: 20 / 20 TESTS PASSED                       
+================================================================================
+
+================================================================================
+2. TASK 25 BENCHMARK EVALUATION (eval/answer_verification_evaluation.py)
+================================================================================
+Command: python -u eval/answer_verification_evaluation.py
+
+================================================================================
+                    TASK 25 EVALUATION BENCHMARK SUMMARY                        
+================================================================================
+Total Evaluated Queries           : 40
+Verification Decision Accuracy    : 85.0%
+Unsupported Detection Rate        : 100.0%
+Contradiction Detection Rate      : 100.0%
+False PASS Rate (Target: 0.000)   : 0.0000
+Safe Rejection Rate               : 100.0%
+Successful Repair Rate            : 100.0%
+Final Grounded Answer Rate        : 65.0%
+Average Turn Latency              : 384.75 ms
+Results File Saved                : D:\chole-bhaature\eval\answer_verification_results.json
+================================================================================
+
+================================================================================
+3. REGRESSION SUITES SUMMARY
+================================================================================
+- Knowledge Gate Tests (agent/knowledge_gate_tests.py):
+  16 / 16 PASSED (100.0%)
+
+- Context Compression Tests (agent/context_compression_tests.py):
+  18 / 18 PASSED (100.0%)
+
+- Escalation Tests (agent/escalation_tests.py):
+  16 / 16 PASSED (100.0%)
+
+- MCP Integration Tests (agent/mcp_integration_tests.py):
+  16 / 16 PASSED (100.0%)
+
+- Resilience Tests (agent/resilience_tests.py):
+  16 / 16 PASSED (100.0%)
+
+- Integration Tests (agent/integration_tests.py):
+  16 / 16 PASSED (100.0%)
+
+- Final 50-Query Benchmark Regression (eval/final_regression.py):
+  50 / 50 PASSED (100.0%)
+  overall_passed: 50
+  overall_pass_rate: 1.0
+  schema_valid_rate: 1.0
+  in_scope_policy_top1_rate: 1.0
+  fallback_recall_rate: 1.0
+  operational_routing_rate: 1.0
+  security_isolation_rate: 1.0
+  hitl_precision: 1.0
+  hitl_recall: 1.0
+================================================================================
