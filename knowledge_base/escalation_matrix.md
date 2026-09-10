@@ -1,0 +1,3 @@
+# Customer Support Escalation Matrix
+
+The escalation matrix establishes mandatory overrides where conversations immediately transfer to a senior human support specialist regardless of automated scores. Hard escalation triggers include explicit allegations of financial fraud, repeated failed payment disputes exceeding 7 days, verified counterfeit product claims, and direct customer requests to speak with a human agent. Escalated cases are assigned a high-priority incident ticket and receive specialized agent outreach within 2 hours. Routine inquiries regarding standard tracking, return policies, and product details remain handled by automated support.
