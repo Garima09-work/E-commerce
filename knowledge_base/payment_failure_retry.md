@@ -1,0 +1,3 @@
+# Payment Failure and Retry Policy
+
+If payment debits from your bank account or digital wallet but the order confirmation fails to generate, the payment gateway initiates an automated reversal within 24 to 48 hours. Depending on the issuing bank, funds typically credit back to the source account within 3 to 5 banking days without requiring manual intervention. Customers may retry placing the order using an alternate payment method such as UPI, saved cards, or Cash on Delivery while the reversal settles. If the deducted amount is not restored within 7 business days, the customer should share their transaction reference number with support for banking reconciliation.
