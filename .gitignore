@@ -1,0 +1,29 @@
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Environment variables & secrets
+.env
+*.env.local
+
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Databases & Checkpoints
+*.sqlite*
+*.sqlite3
+*.db
+checkpoints.sqlite
+chroma_db/
+.chroma/
+
+# Logs & temporary files
+*.log
+logs/
+*.jsonl
+scratch/
+
