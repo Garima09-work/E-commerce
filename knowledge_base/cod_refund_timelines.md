@@ -1,0 +1,3 @@
+# Cash on Delivery Refund Timelines
+
+Refunds for orders paid via Cash on Delivery (COD) are processed directly into the customer's verified bank account or credited as Nykaa store credits within 5 to 7 business days following quality verification at our fulfillment center. Customers must provide their Bank Account Number and IFSC code through the support portal or checkout returns interface to receive direct bank transfers. Once initiated, the bank reference number (UTR) is shared via SMS and registered email for tracking. Store credit refunds are credited instantly upon return inspection approval and never expire.
