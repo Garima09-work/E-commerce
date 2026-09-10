@@ -1,0 +1,3 @@
+# Reverse Pickup Schedule and Guidelines
+
+Once an eligible return or exchange request is authorized, a reverse pickup courier agent will be dispatched to the delivery address within 24 to 48 business hours. Customers must securely hand over the item in its original brand box, complete with all price tags, manuals, protective packaging, and free promotional gifts included with the purchase. The pickup executive inspects the basic physical condition of the package and issues a digital pickup receipt upon collection. If the courier partner is unable to reach the customer after two consecutive attempts, the pickup request is cancelled and must be re-initiated through support.
