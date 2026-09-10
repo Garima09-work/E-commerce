@@ -1,0 +1,92 @@
+[
+  {
+    "id": "Q01",
+    "query": "Can I return cosmetic products or opened perfumes?",
+    "expected_sources": ["return_window.md"],
+    "topic": "returns"
+  },
+  {
+    "id": "Q02",
+    "query": "How long does a Cash on Delivery refund take to credit to my bank account?",
+    "expected_sources": ["cod_refund_timelines.md"],
+    "topic": "cod_refunds"
+  },
+  {
+    "id": "Q03",
+    "query": "What are the standard delivery timelines for metropolitan cities?",
+    "expected_sources": ["delivery_sla.md"],
+    "topic": "delivery"
+  },
+  {
+    "id": "Q04",
+    "query": "When will the courier agent come to pick up my returned item?",
+    "expected_sources": ["reverse_pickup.md"],
+    "topic": "reverse_pickup"
+  },
+  {
+    "id": "Q05",
+    "query": "Is there a manufacturer warranty on electric hair styling tools?",
+    "expected_sources": ["warranty_terms.md"],
+    "topic": "warranty"
+  },
+  {
+    "id": "Q06",
+    "query": "Can I cancel my order before it gets dispatched from the warehouse?",
+    "expected_sources": ["cancellation_policy.md"],
+    "topic": "cancellation"
+  },
+  {
+    "id": "Q07",
+    "query": "How do I earn and redeem Nykaa reward points at checkout?",
+    "expected_sources": ["loyalty_points.md"],
+    "topic": "loyalty_points"
+  },
+  {
+    "id": "Q08",
+    "query": "My bank account was debited but my order confirmation failed.",
+    "expected_sources": ["payment_failure_retry.md"],
+    "topic": "payment_failure"
+  },
+  {
+    "id": "Q09",
+    "query": "Can I exchange my footwear for a different size?",
+    "expected_sources": ["size_exchange.md"],
+    "topic": "size_exchange"
+  },
+  {
+    "id": "Q10",
+    "query": "I received a broken cosmetics bottle in my parcel.",
+    "expected_sources": ["damaged_item_claims.md"],
+    "topic": "damaged_items"
+  },
+  {
+    "id": "Q11",
+    "query": "Does Nykaa ship internationally and who pays the customs duty?",
+    "expected_sources": ["international_shipping.md"],
+    "topic": "international_shipping"
+  },
+  {
+    "id": "Q12",
+    "query": "Under what circumstances is an issue escalated to a human supervisor?",
+    "expected_sources": ["escalation_matrix.md"],
+    "topic": "escalation"
+  },
+  {
+    "id": "Q13",
+    "query": "Can I return intimate wear or lingerie?",
+    "expected_sources": ["return_window.md"],
+    "topic": "returns_hygiene"
+  },
+  {
+    "id": "Q14",
+    "query": "What happens if the replacement size for my footwear is out of stock?",
+    "expected_sources": ["size_exchange.md"],
+    "topic": "size_exchange_stock"
+  },
+  {
+    "id": "Q15",
+    "query": "When can I refuse delivery at my doorstep if I changed my mind?",
+    "expected_sources": ["cancellation_policy.md"],
+    "topic": "cancellation_doorstep"
+  }
+]
