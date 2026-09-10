@@ -1,0 +1,3 @@
+# Manufacturer Warranty Terms
+
+Electronic styling tools, personal grooming appliances, and tech wellness devices purchased on Nykaa carry a standard 1-year to 2-year manufacturer warranty against manufacturing defects. The official manufacturer warranty card, intact serial number, and original Nykaa invoice serve as valid proof of purchase for warranty claims. Damage resulting from accidental drops, liquid contact, physical tampering, unauthorized repairs, or normal daily cosmetic wear and tear is not covered under warranty. Warranty fulfillment and servicing are executed through authorized brand service centers.
