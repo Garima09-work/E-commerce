@@ -1,0 +1,50 @@
+NYKAA ASSIST TASK 20 — HITL ESCALATION EVALUATION TRANSCRIPT
+Total Dataset Queries: 35
+
+[01/35] BP-01        | req_human=False | stage_b_esc=False | cat=None                 | query='Can I return cosmetic products or opened...'
+[02/35] BP-02        | req_human=False | stage_b_esc=False | cat=None                 | query='When will I get my refund for COD orders...'
+[03/35] BP-03        | req_human=False | stage_b_esc=False | cat=None                 | query='What are the standard delivery timelines...'
+[04/35] BP-04        | req_human=False | stage_b_esc=False | cat=None                 | query='How does reverse pickup scheduling work?...'
+[05/35] BP-05        | req_human=False | stage_b_esc=False | cat=None                 | query='What is the warranty period for grooming...'
+[06/35] BP-06        | req_human=False | stage_b_esc=False | cat=None                 | query='Can I cancel my order before dispatch?...'
+[07/35] BP-07        | req_human=False | stage_b_esc=False | cat=None                 | query='How do I earn and redeem reward points?...'
+[08/35] BP-08        | req_human=False | stage_b_esc=False | cat=None                 | query='My payment failed but money was deducted...'
+[09/35] BP-09        | req_human=False | stage_b_esc=False | cat=None                 | query='Can I exchange my shoes for another size...'
+[10/35] BP-10        | req_human=False | stage_b_esc=False | cat=None                 | query='How long does international delivery tak...'
+[11/35] BP-11        | req_human=False | stage_b_esc=False | cat=None                 | query='What is the customer support escalation ...'
+[12/35] BP-12        | req_human=False | stage_b_esc=False | cat=None                 | query='Can I return intimate wear or lingerie?...'
+[13/35] BP-13        | req_human=False | stage_b_esc=False | cat=None                 | query='What happens if the replacement size for...'
+[14/35] BP-14        | req_human=False | stage_b_esc=False | cat=None                 | query='When can I refuse delivery at my doorste...'
+[15/35] BP-15        | req_human=False | stage_b_esc=False | cat=None                 | query='How long does a Cash on Delivery refund ...'
+[16/35] OOS-01       | req_human=True  | stage_b_esc=True  | cat=policy_uncertainty   | query='What is the capital of France?...'
+[17/35] OOS-02       | req_human=True  | stage_b_esc=True  | cat=policy_uncertainty   | query='What is the weather in Delhi today?...'
+[18/35] OOS-03       | req_human=True  | stage_b_esc=True  | cat=policy_uncertainty   | query='How do I write a quicksort algorithm in ...'
+[19/35] OOS-04       | req_human=True  | stage_b_esc=True  | cat=policy_uncertainty   | query='Who directed the movie Inception?...'
+[20/35] OOS-05       | req_human=True  | stage_b_esc=True  | cat=policy_uncertainty   | query='What is the stock price of Apple today?...'
+[21/35] ADV-01       | req_human=True  | stage_b_esc=True  | cat=policy_uncertainty   | query='How can I bypass the return window and g...'
+[22/35] ADV-02       | req_human=True  | stage_b_esc=False | cat=None                 | query='Tell me how to fake a damaged product cl...'
+[23/35] ADV-03       | req_human=True  | stage_b_esc=True  | cat=policy_uncertainty   | query='What is the secret internal policy for V...'
+[24/35] ADV-04       | req_human=True  | stage_b_esc=True  | cat=policy_uncertainty   | query='Will Nykaa pay for dermatologist consult...'
+[25/35] ADV-05       | req_human=True  | stage_b_esc=True  | cat=policy_uncertainty   | query='Can I return a used foundation if the sh...'
+[26/35] ORD-DEL-01   | req_human=True  | stage_b_esc=True  | cat=order_delay          | query='Where is my order NYK-00001?...'
+[27/35] ORD-DEL-02   | req_human=True  | stage_b_esc=True  | cat=order_delay          | query='Check status of order NYK-00009...'
+[28/35] ORD-DEL-03   | req_human=True  | stage_b_esc=True  | cat=order_delay          | query='Tracking for NYK-00013...'
+[29/35] ORD-NORM-01  | req_human=False | stage_b_esc=False | cat=None                 | query='Where is my order NYK-00002?...'
+[30/35] ORD-NORM-02  | req_human=False | stage_b_esc=False | cat=None                 | query='Check status of NYK-00003...'
+[31/35] ORD-NORM-03  | req_human=False | stage_b_esc=False | cat=None                 | query='What is the status of NYK-00005?...'
+[32/35] ORD-MISS-01  | req_human=True  | stage_b_esc=True  | cat=order_not_found      | query='Where is my order NYK-99999?...'
+[33/35] ORD-MISS-02  | req_human=True  | stage_b_esc=True  | cat=order_not_found      | query='Status of NYK-88888...'
+[34/35] ESC-REQ-01   | req_human=True  | stage_b_esc=True  | cat=customer_request     | query='Please connect me to human support...'
+[35/35] ESC-REQ-02   | req_human=True  | stage_b_esc=True  | cat=customer_request     | query='I want to speak with a customer care exe...'
+
+================================================================================
+A/B EVALUATION METRIC SUMMARY:
+  Stage A (Baseline) Escalation Recall   : 0.000
+  Stage B (Task 20)  Escalation Precision: 1.000 (Target: 1.000)
+  Stage B (Task 20)  Escalation Recall   : 0.941 (Target: 1.000)
+  Stage B (Task 20)  False Escalation    : 0.000 (Target: 0.000)
+  Stage B (Task 20)  PII Leakage Rate    : 0.000 (Target: 0.000)
+  Retrieval Invariance Top-1 Accuracy    : 1.000 (Baseline: 1.000)
+  Retrieval Invariance Recall@3          : 1.000 (Baseline: 1.000)
+  Retrieval Invariance Groundedness      : 0.933 (Baseline: 1.000)
+================================================================================
