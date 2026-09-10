@@ -1,0 +1,27 @@
+$ .venv\Scripts\python.exe dataset.py
+========================================
+      NYKAA ASSIST DATASET REPORT       
+========================================
+Total Records Generated : 50
+
+--- Category Breakdown ---
+  Apparel      : 11 ( 22.0%)
+  Electronics  :  9 ( 18.0%)
+  Home         :  7 ( 14.0%)
+  Footwear     :  5 ( 10.0%)
+  Beauty       : 18 ( 36.0%)
+
+--- Order Status Breakdown ---
+  Placed       :  7 ( 14.0%)
+  Shipped      : 15 ( 30.0%)
+  Delivered    : 17 ( 34.0%)
+  Returned     :  5 ( 10.0%)
+  Refunded     :  6 ( 12.0%)
+
+--- Delivery Performance ---
+  On-Time      : 38 ( 76.0%)
+  Delayed      : 12 ( 24.0%)
+----------------------------------------
+Delayed Shipment Rate : 24.0% (Required: 10.0% - 30.0%)
+Status               : VALID (Within SLA Threshold)
+========================================
